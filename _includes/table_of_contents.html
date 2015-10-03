@@ -1,0 +1,18 @@
+{% assign chapter_titles = "Artificial Intelligence|Computational Biology|Computation Graphics|Human Computer Interaction|Software Engineering|Software Projects|Profiles" | split: "|" %}
+
+
+<div class="marginless-collection collection">
+  <a href="#" class="collection-item">
+    <span class="toc-enum">Foreword</span></br>
+    <span class="toc-title">Title of Foreword</span>
+  </a>
+
+  {% for chapter in chapter_titles %}
+  <a href="#" class="collection-item">
+    <span class="toc-enum">Chapter {{ forloop.index }}</span></br>
+    <span class="toc-title">{{ chapter }}</span>
+  </a>
+
+  {% endfor %}
+
+</div>

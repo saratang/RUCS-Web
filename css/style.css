@@ -5,72 +5,90 @@
  *
  * Made By MaterializeCSS.com
  */
+html * {
+  font-family: "CMU Serif"; }
+
+h3, h2 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 1.168rem 0; }
+
+.card-panel, .marginless-card-panel {
+  transition: box-shadow .25s;
+  padding: 20px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  background-color: #fff; }
 
 .icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
+  padding: 0 15px; }
 
-.full-height {
-	height: 100vh;
-}
+.icon-block .material-icons {
+  font-size: inherit; }
+
+.full-height, .background {
+  height: 100vh; }
 
 .background {
-	height: 100vh;
-	background: url(../resources/background0.svg);
-	background-size: cover;
-	width: 100%;
-}
+  background: url(../resources/background0.svg);
+  background-size: cover;
+  width: 100%; }
 
-.90-height {
-	height: 90vh;
-}
+.height-90 {
+  height: 90vh; }
 
 .review-title {
-	font-size: 10em;
-}
+  font-size: 10em;
+  font-family: "Code Pro Demo"; }
+
+.review-subtitle {
+  font-family: "Code Pro Demo";
+  letter-spacing: 0.2em;
+  line-height: 2em; }
 
 .footer-bg-image {
-	background: url(../resources/backgroun0.svg);
-	background-size: cover;
-}
-
-.marginless {
-	margin: 0;
-	border-radius: 0;
-}
+  background: url(../resources/backgroun0.svg);
+  background-size: cover; }
 
 .padless {
-	padding: 0 !important;
-}
+  padding: 0 !important; }
 
-.relative {
-	position: relative;
-}
+.marginless-card-panel {
+  margin: 0;
+  border-radius: 0; }
 
-.absolute {
-	vertical-align: bottom;
-}
+.marginless-collection {
+  margin: 0 !important; }
 
-.10-margin {
-	margin: 10px;
-}
+.marginless-col, .marginless-row {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.post-header {
+  margin: 10em 0 0 0; }
 
 .post-title {
-	text-align: center;
-	font-family: "CMU Serif";
-}
+  text-align: center;
+  font-family: "CMU Serif"; }
 
-.post-meat {
-	font-family: "CMU Serif";
-}
+.post-meta {
+  text-align: center;
+  font-family: "CMU Serif"; }
 
-.post-content {
-	font-family: "CMU Serif";
-}
+.post-content, .post-meta {
+  font-family: "CMU Serif";
+  font-size: 1.1em; }
 
 .no-shadow {
-	box-shadow: 0 !important;
-}
+  box-shadow: 0 !important; }
+
+.brand-logo {
+  font-family: "Code Pro Demo"; }
+
+.toc-enum {
+  font-weight: 300; }
+
+.parallax-container {
+  height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */

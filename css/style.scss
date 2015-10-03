@@ -1,0 +1,124 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+$primary-color: color("cyan", "darken-2") !default;
+$web-title: "Code Pro Demo";
+$post-font: "CMU Serif";
+
+html * {
+	font-family: $post-font;
+}
+
+h3 {
+  font-size: 2.92rem;
+  line-height: 110%;
+  margin: 1.46rem 0 1.168rem 0; }
+
+h2 {
+	@extend h3;
+}
+
+.card-panel {
+  transition: box-shadow .25s;
+  padding: 20px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.background {
+	@extend .full-height;
+	background: url(../resources/background0.svg);
+	background-size: cover;
+	width: 100%;
+}
+
+.height-90 {
+	height: 90vh;
+}
+
+.review-title {
+	font-size: 10em;
+	font-family: $web-title;
+}
+
+.review-subtitle {
+	font-family: $web-title;
+	letter-spacing: 0.2em;
+	line-height: 2em;
+}
+
+.footer-bg-image {
+	background: url(../resources/backgroun0.svg);
+	background-size: cover;
+}
+
+.padless {
+	padding: 0 !important;
+}
+
+.marginless-card-panel {
+	@extend .card-panel !optional;
+	margin: 0;
+	border-radius: 0;
+}
+
+.marginless-collection {
+	margin: 0 !important;
+}
+
+.marginless-col, .marginless-row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.post-header {
+	margin: 10em 0 0 0;
+}
+
+.post-title {
+	text-align: center;
+	font-family: $post-font;
+}
+
+.post-meta {
+	text-align: center;
+	font-family: $post-font;
+}
+
+.post-content, .post-meta {
+	font-family: $post-font;
+	font-size: 1.1em;
+}
+
+.no-shadow {
+	box-shadow: 0 !important;
+}
+
+.brand-logo {
+	font-family: $web-title;
+}
+
+.toc-enum {
+	font-weight: 300; 	
+}
+
+.parallax-container{
+	height: 100vh;
+}
