@@ -1,0 +1,76 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.background {
+	height: 100vh;
+	background: url(../resources/background0.svg);
+	background-size: cover;
+	width: 100%;
+}
+
+.90-height {
+	height: 90vh;
+}
+
+.review-title {
+	font-size: 10em;
+}
+
+.footer-bg-image {
+	background: url(../resources/backgroun0.svg);
+	background-size: cover;
+}
+
+.marginless {
+	margin: 0;
+	border-radius: 0;
+}
+
+.padless {
+	padding: 0 !important;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	vertical-align: bottom;
+}
+
+.10-margin {
+	margin: 10px;
+}
+
+.post-title {
+	text-align: center;
+	font-family: "CMU Serif";
+}
+
+.post-meat {
+	font-family: "CMU Serif";
+}
+
+.post-content {
+	font-family: "CMU Serif";
+}
+
+.no-shadow {
+	box-shadow: 0 !important;
+}

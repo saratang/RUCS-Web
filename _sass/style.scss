@@ -1,0 +1,28 @@
+.full-height {
+	height: 100vh;
+}
+
+.background {
+	@extend .full-height;
+	background: url(../resources/background0.svg);
+	background-size: cover;
+	width: 100%;
+}
+
+.90-height {
+	height: 90vh;
+}
+
+.review-title {
+	font-size: 10em;
+}
+
+.footer-bg-image {
+	background: url(../resources/backgroun0.svg);
+	background-size: cover;
+}
+
+.marginless-card-panel {
+	@extend .card-panel;
+	margin: 0;
+}
