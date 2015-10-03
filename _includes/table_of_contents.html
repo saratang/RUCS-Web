@@ -1,18 +1,30 @@
 {% assign chapter_titles = "Artificial Intelligence|Computational Biology|Computation Graphics|Human Computer Interaction|Software Engineering|Software Projects|Profiles" | split: "|" %}
 
+<h5>Table of Contents</h5>
+<div class="row">
+  <div class="marginless-col col s12 m4 l3">
+    <div class="marginless-collection collection">
+      <a href="#" class="collection-item">
+        <span class="toc-enum">Foreword</span></br>
+        <span class="toc-title">Title of Foreword</span>
+      </a>
 
-<div class="marginless-collection collection">
-  <a href="#" class="collection-item">
-    <span class="toc-enum">Foreword</span></br>
-    <span class="toc-title">Title of Foreword</span>
-  </a>
+      {% for chapter in chapter_titles %}
+      <a href="#" class="collection-item">
+        <span class="toc-enum">Chapter {{ forloop.index }}</span></br>
+        <span class="toc-title">{{ chapter }}</span>
+      </a>
 
-  {% for chapter in chapter_titles %}
-  <a href="#" class="collection-item">
-    <span class="toc-enum">Chapter {{ forloop.index }}</span></br>
-    <span class="toc-title">{{ chapter }}</span>
-  </a>
+      {% endfor %}
 
-  {% endfor %}
+    </div>
+  </div>
 
+  <div class="marginless-col col s12 m8 l9">
+    <div class="toc-content">
+      <div class="marginless-card-panel cyan darken-2">
+        <span class="white-text">This is the foreword.</span>
+      </div>
+    </div>
+  </div>
 </div>
