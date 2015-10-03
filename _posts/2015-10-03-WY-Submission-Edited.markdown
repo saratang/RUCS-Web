@@ -4,7 +4,6 @@ title:  "A Fast Single-Extractor Wait-Free Priority Queue"
 author: "Kenneth D. Hoover and Yuanhao Wei"
 date:   2015-10-02 20:44:52
 category: "Artificial Intelligence"
-permalink: priority
 ---
 
 ##Introduction
