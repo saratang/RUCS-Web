@@ -6,9 +6,13 @@
  * Made By MaterializeCSS.com
  */
 
+@import('/materialize.css');
+
 $primary-color: color("cyan", "darken-2") !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
+
+
 
 html * {
 	font-family: $post-font;
@@ -39,7 +43,7 @@ h2 {
 }
 
 .full-height {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .background {
@@ -51,6 +55,10 @@ h2 {
 
 .height-90 {
 	height: 90vh;
+}
+
+.height-100 {
+	height: 100%;
 }
 
 .review-title {
@@ -77,6 +85,12 @@ h2 {
 	@extend .card-panel !optional;
 	margin: 0;
 	border-radius: 0;
+	max-height: 206.5px;
+}
+
+.marginless-card {
+	margin: 0 !important;
+	box-shadow: 0 !important;
 }
 
 .marginless-collection {
@@ -115,10 +129,35 @@ h2 {
 	font-family: $web-title;
 }
 
+.toc-title{
+	text-transform: capitalize;
+}
+
 .toc-enum {
 	font-weight: 300; 	
 }
 
-.parallax-container{
-	height: 100vh;
+.toc-content {
+	height: 100%;
+	width: 100%;
+}
+
+.height-fix {
+	max-height: 456px !important;
+	height: 456px;
+	overflow: hidden !important;
+}
+
+#toc-content, #toc-content-wrapepr {
+	max-height: 456px !important;
+	height: 456px;
+	overflow: hidden !important;
+}
+
+.collection.active {
+	background-color: $primary-color;
+}
+
+.card-active {
+	background-color: color("cyan", "lighten-1");
 }

@@ -1,23 +1,43 @@
 ---
-layout: default
+layout: no_header
 ---
 
-<div class="home">
+<div class="background">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  {% include header.html %}
+  
+  <div class="section no-pad-box" id="index-banner">
+    <div class="container">
+      <br><br><br><br><br><br><br>
+      <h1 class="review-title center white-text" id="site-title">RUCS</h1>
+      <div class="row center">
+        <h5 class="review-subtitle white-text">Review of Undergraduate</br> Computer Science</h5>
+      </div>
+      <div class="row center">
+        <a class="waves-effect waves-light btn-large" id="enter-button">Enter</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<a name="table-of-contents"></a>
+<div class="full-height container valign-wrapper" id="table_of_contents" >
+  <div class="section valign">
+      {% include table_of_contents.html %}
+    </div>
+  </div>
+</div>
+
+<a name="foreword"></a>
+<div class="full-height container">
+  <div class="section">
+    {% include foreword.html %}
+  </div>
+</div> 
+
+<a name="acknowledgements"></a>
+<div class="full-height container">
+  <div class="section">
+    {% include acknowledgements.html %}
+  </div>
+</div> 

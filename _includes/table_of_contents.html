@@ -70,7 +70,7 @@
           {% if forloop.first == false %}
           {% for abstract in abstracts %}
           <div class="col m12 l6">
-            <a href='{{ abstract.url }}' class="white-text">
+            <a href='{{ site.baseurl }}{{ abstract.url }}' class="white-text">
             <div class="marginless-card-panel cyan darken-2">
               <span class="white-text">{{ abstract.title }}</span><br/>
               <span class="white-text">{{ abstract.author }}</span><br/>

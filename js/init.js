@@ -1,5 +1,5 @@
 (function($){
-	$(".toc-content").children().hide();
+$(".toc-content").children().hide();
 	// $("#foreword").show();
   $(function(){
 	$(".collection-item").click(function(e) {
