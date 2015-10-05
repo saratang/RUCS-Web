@@ -6,13 +6,13 @@
  * Made By MaterializeCSS.com
  */
 
-@import('/materialize.css');
+@import 'materialize.css';
 
-$primary-color: color("cyan", "darken-2") !default;
+$primary-color: #0097a7 !default;
+$primary-color-dark: #00838f !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
-
-
+$background: url(../resources/backgroundweb.svg);
 
 html * {
 	font-family: $post-font;
@@ -27,14 +27,6 @@ h2 {
 	@extend h3;
 }
 
-.card-panel {
-  transition: box-shadow .25s;
-  padding: 20px;
-  margin: 0.5rem 0 1rem 0;
-  border-radius: 2px;
-  background-color: #fff;
-}
-
 .icon-block {
   padding: 0 15px;
 }
@@ -46,9 +38,15 @@ h2 {
 	min-height: 100vh;
 }
 
+.marginless-collection .collection-item {
+	border-bottom: 0;
+	border-right: 4px solid white;
+	margin-right: 2px;
+}
+
 .background {
 	@extend .full-height;
-	background: url(../resources/background0.svg);
+	background: $background;
 	background-size: cover;
 	width: 100%;
 }
@@ -73,7 +71,7 @@ h2 {
 }
 
 .footer-bg-image {
-	background: url(../resources/backgroun0.svg);
+	background: $background;
 	background-size: cover;
 }
 
@@ -82,10 +80,25 @@ h2 {
 }
 
 .marginless-card-panel {
-	@extend .card-panel !optional;
+	padding: 20px;
+	background-color: $primary-color;
 	margin: 0;
 	border-radius: 0;
-	max-height: 206.5px;
+	height: 50%;
+	overflow: scroll;
+	.title {
+		color: white;
+	}
+	.author {
+		color: white;
+	}
+	.preview {
+		color: white;
+	}
+}
+
+.card-panel-unhover {
+	background-color: $primary-color-dark;
 }
 
 .marginless-card {
@@ -95,6 +108,10 @@ h2 {
 
 .marginless-collection {
 	margin: 0 !important;
+	border: 0;
+	height: 406px;
+	background-color: white;
+	border-radius: 0;
 }
 
 .marginless-col, .marginless-row {
@@ -112,11 +129,11 @@ h2 {
 }
 
 .post-meta {
-	text-align: center;
-	font-family: $post-font;
+	@extend .post-title;
+	font-size: 1.1em;
 }
 
-.post-content, .post-meta {
+.post-content {
 	font-family: $post-font;
 	font-size: 1.1em;
 }
@@ -130,11 +147,13 @@ h2 {
 }
 
 .toc-title{
+	@extend .black-text !optional;
 	text-transform: capitalize;
 }
 
 .toc-enum {
-	font-weight: 300; 	
+	@extend .black-text !optional;
+	font-weight: 300;
 }
 
 .toc-content {
@@ -142,22 +161,39 @@ h2 {
 	width: 100%;
 }
 
+.toc-chapter-content {
+	height: 100%;
+	width: 100%;
+}
+
 .height-fix {
-	max-height: 456px !important;
-	height: 456px;
+	max-height: 406px !important;
+	height: 406px;
 	overflow: hidden !important;
 }
 
-#toc-content, #toc-content-wrapepr {
-	max-height: 456px !important;
-	height: 456px;
+#toc-content, #toc-content-wrapper {
+	max-height: 406px !important;
+	height: 406px;
 	overflow: hidden !important;
-}
-
-.collection.active {
-	background-color: $primary-color;
 }
 
 .card-active {
 	background-color: color("cyan", "lighten-1");
+}
+
+.parallax-container {
+	height: 200px !important;
+}
+
+.toc-chapter-content {
+	position: relative;
+}
+
+.bottom {
+	position: absolute;
+}
+
+.page-footer {
+	background: $background;
 }

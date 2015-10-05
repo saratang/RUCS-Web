@@ -5,6 +5,7 @@
  *
  * Made By MaterializeCSS.com
  */
+@import url(materialize.css);
 html * {
   font-family: "CMU Serif"; }
 
@@ -13,13 +14,6 @@ h3, h2 {
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0; }
 
-.card-panel, .marginless-card-panel {
-  transition: box-shadow .25s;
-  padding: 20px;
-  margin: 0.5rem 0 1rem 0;
-  border-radius: 2px;
-  background-color: #fff; }
-
 .icon-block {
   padding: 0 15px; }
 
@@ -27,15 +21,23 @@ h3, h2 {
   font-size: inherit; }
 
 .full-height, .background {
-  height: 100vh; }
+  min-height: 100vh; }
+
+.marginless-collection .collection-item {
+  border-bottom: 0;
+  border-right: 4px solid white;
+  margin-right: 2px; }
 
 .background {
-  background: url(../resources/background0.svg);
+  background: url(../resources/backgroundweb.svg);
   background-size: cover;
   width: 100%; }
 
 .height-90 {
   height: 90vh; }
+
+.height-100 {
+  height: 100%; }
 
 .review-title {
   font-size: 10em;
@@ -47,18 +49,39 @@ h3, h2 {
   line-height: 2em; }
 
 .footer-bg-image {
-  background: url(../resources/backgroun0.svg);
+  background: url(../resources/backgroundweb.svg);
   background-size: cover; }
 
 .padless {
   padding: 0 !important; }
 
 .marginless-card-panel {
+  padding: 20px;
+  background-color: #0097a7;
   margin: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  height: 50%;
+  overflow: scroll; }
+  .marginless-card-panel .title {
+    color: white; }
+  .marginless-card-panel .author {
+    color: white; }
+  .marginless-card-panel .preview {
+    color: white; }
+
+.card-panel-unhover {
+  background-color: #00838f; }
+
+.marginless-card {
+  margin: 0 !important;
+  box-shadow: 0 !important; }
 
 .marginless-collection {
-  margin: 0 !important; }
+  margin: 0 !important;
+  border: 0;
+  height: 406px;
+  background-color: white;
+  border-radius: 0; }
 
 .marginless-col, .marginless-row {
   margin: 0 !important;
@@ -67,15 +90,14 @@ h3, h2 {
 .post-header {
   margin: 10em 0 0 0; }
 
-.post-title {
+.post-title, .post-meta {
   text-align: center;
   font-family: "CMU Serif"; }
 
 .post-meta {
-  text-align: center;
-  font-family: "CMU Serif"; }
+  font-size: 1.1em; }
 
-.post-content, .post-meta {
+.post-content {
   font-family: "CMU Serif";
   font-size: 1.1em; }
 
@@ -85,10 +107,43 @@ h3, h2 {
 .brand-logo {
   font-family: "Code Pro Demo"; }
 
+.toc-title {
+  text-transform: capitalize; }
+
 .toc-enum {
   font-weight: 300; }
 
+.toc-content {
+  height: 100%;
+  width: 100%; }
+
+.toc-chapter-content {
+  height: 100%;
+  width: 100%; }
+
+.height-fix {
+  max-height: 406px !important;
+  height: 406px;
+  overflow: hidden !important; }
+
+#toc-content, #toc-content-wrapper {
+  max-height: 406px !important;
+  height: 406px;
+  overflow: hidden !important; }
+
+.card-active {
+  background-color: color("cyan", "lighten-1"); }
+
 .parallax-container {
-  height: 100vh; }
+  height: 200px !important; }
+
+.toc-chapter-content {
+  position: relative; }
+
+.bottom {
+  position: absolute; }
+
+.page-footer {
+  background: url(../resources/backgroundweb.svg); }
 
 /*# sourceMappingURL=style.css.map */

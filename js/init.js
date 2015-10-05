@@ -1,18 +1,11 @@
 (function($){
+
+$(".parallax").parallax();
 $(".toc-content").children().hide();
-	// $("#foreword").show();
-  $(function(){
-	$(".collection-item").click(function(e) {
-		element_id = $(this).attr('href');
-		$(".collection").children().removeClass('active');
-		$(this).addClass('active');
-		$(".toc-content").children().hide(0, function() {
-			$(element_id).show();
-		});
+$("#artificial-intelligence").show();
 
-		e.preventDefault();
-	});
+$(function(){
 
-  }); // end of document ready
+}); // end of document ready
 
 })(jQuery); // end of jQuery name space
