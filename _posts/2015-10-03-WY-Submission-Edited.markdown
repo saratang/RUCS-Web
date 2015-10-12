@@ -9,7 +9,7 @@ category: "Artificial Intelligence"
 ##Introduction
 
 A priority queue is a fundamental abstract data type that supports two
-operations: ${\textsc{Insert}}(k)$ and ${\textsc{Extract-Max}}$.
+operations: ${\rm I{\small NSERT}}(k)$ and ${\textsc{Extract-Max}}$.
 Priority queues have many practical applications, especially in areas
 such as scheduling and event driven simulations. Some examples of
 applications of priority queues in distributed environments appear in
@@ -107,7 +107,7 @@ ${\textsc{SISD-Insert}}$ or ${\textsc{SISD-Delete}}$ will reduce the
 $\log{}m$ term in the step complexities of ${\textsc{Insert}}$ or
 ${\textsc{Extract-Max}}$, respectively.
 
-##### Acknowledgements {#acknowledgements .unnumbered}
+#### Acknowledgements <!---{#acknowledgements .unnumbered}-->
 
 We would like to thank our supervisor, Professor Faith Ellen, for the
 advice she gave us while writing this paper, and for the numerous hours
