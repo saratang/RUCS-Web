@@ -49,6 +49,10 @@ I didn't run into many issues with converting .tex to .md, (except for the one m
 
 * Every header got moved down one level, because Liquid automagically chooses the title from the header information and makes it h1. So (at least for the sample article), I moved every subtitle to have h2, and every sub-sub title to have h3.
 
+##Fonts
+I'm using Computer Modern in the abstracts, I believe it supports *italics*, <b>bold</b>, and whatever this is => ${\rm Roman? Semi-bold?}$ Whatever it is, it's rendered using {\rm texthere} in LaTeX.
+
+##Finally...
 Finally, you can fork the website from my repo:
 
-https://github.com/saratang/RUCS-Web
+<a href="https://github.com/saratang/RUCS-Web" target="_blank" >https://github.com/saratang/RUCS-Web</a>
