@@ -21,14 +21,13 @@
 		e.preventDefault();
 	});
 
-	$(".marginless-card-panel").hover(
-		function() {
-			$(".marginless-card-panel").addClass('card-panel-unhover');
-			$(this).removeClass('card-panel-unhover');
-		}, function() {
-			$(".marginless-card-panel").removeClass('card-panel-unhover');
-		}
-	);
+	// $(".marginless-card-panel").hover(
+	// 	function() {
+	// 		$(this).addClass('z-depth-3');
+	// 	}, function() {
+	// 		$(this).removeClass('z-depth-3');
+	// 	}
+	// );
 
 
 	// 	var options = [

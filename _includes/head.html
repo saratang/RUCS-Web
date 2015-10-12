@@ -28,4 +28,24 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="{{ site.baseurl }}/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ site.baseurl }}/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- For rendering custom CSS for individual pages -->
+  {% if page && page.css %}
+  <link href="{{ site.baseurl }}/css/{{ page.css }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  {% endif %}
+  
+  <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+
+    messageStyle: "none",
+
+    showMathMenu: false,
+  });
+</script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>

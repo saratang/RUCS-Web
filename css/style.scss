@@ -6,10 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
-@import 'materialize.css';
+@import 'materialize';
 
-$primary-color: #0097a7 !default;
-$primary-color-dark: #00838f !default;
+$primary-color: color('cyan', 'darken-2') !default;
+$primary-color-dark: color('cyan', 'darken-3') !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url(../resources/backgroundweb.svg);
@@ -18,14 +18,31 @@ html * {
 	font-family: $post-font;
 }
 
-h3 {
-  font-size: 2.92rem;
-  line-height: 110%;
-  margin: 1.46rem 0 1.168rem 0; }
+h1 {
+	@extend h1;
+	font-size: 3.56rem;
+}
 
 h2 {
-	@extend h3;
+	@extend h2;
+	font-size: 2.92rem;
 }
+
+h3 {
+  	@extend h3;
+  	font-size: 2.28rem; }
+
+h4 {
+	@extend h4;
+	font-size: 1.64rem; }
+
+h5 {
+	@extend h5;
+	font-size: 1rem; }
+
+h6 {
+	@extend h6;
+	font-size: 0.6rem; }
 
 .icon-block {
   padding: 0 15px;
@@ -80,13 +97,17 @@ h2 {
 }
 
 .marginless-card-panel {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	padding: 20px;
 	background-color: $primary-color;
 	margin: 0;
 	border-radius: 0;
-	height: 50%;
 	overflow: scroll;
 	.title {
+		font-weight: bold;
+		font-size: 2em;
 		color: white;
 	}
 	.author {
@@ -95,6 +116,18 @@ h2 {
 	.preview {
 		color: white;
 	}
+}
+
+.marginless-card-panel-container:hover{
+    -webkit-box-shadow:inset 0px 0px 0px 4px white;
+    -moz-box-shadow:inset 0px 0px 0px 4px white;
+    box-shadow:inset 0px 0px 0px 4px white;
+}
+
+.marginless-card-panel-container {
+	width: 50%;
+	height: 50%;
+	overflow: scroll;
 }
 
 .card-panel-unhover {
@@ -117,6 +150,10 @@ h2 {
 .marginless-col, .marginless-row {
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+.post-container {
+	width: 50%;
 }
 
 .post-header {
@@ -147,12 +184,12 @@ h2 {
 }
 
 .toc-title{
-	@extend .black-text !optional;
+	color: $primary-color-dark;
 	text-transform: capitalize;
 }
 
 .toc-enum {
-	@extend .black-text !optional;
+	color: $primary-color-dark;
 	font-weight: 300;
 }
 
@@ -164,6 +201,10 @@ h2 {
 .toc-chapter-content {
 	height: 100%;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: stretch;
 }
 
 .height-fix {

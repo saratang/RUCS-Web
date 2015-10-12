@@ -1,12 +1,12 @@
-{% assign chapter_titles = "Artificial Intelligence|Computational Biology|Computation Graphics|Human Computer Interaction|Software Engineering|Software Projects|Profiles" | split: "|" %}
+{% assign chapter_titles = site.categories | sort %}
 
-<h5>RUCS</h5>
+<h4>RUCS</h4>
 <div class="height-fix">
   <div class="row cyan darken-2">
     <div class="marginless-col col m4 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
-        {% for chapter in site.categories %}
+        {% for chapter in chapter_titles %}
 
         {% if forloop.first == true %}
 
@@ -32,7 +32,7 @@
     <div class="marginless-col col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible" data-collapsible="accordion">
 
-        {% for chapter in site.categories %}
+        {% for chapter in chapter_titles %}
           {% if forloop.first == true %}
             <li>
               <div class="collapsible-header active">{{ chapter[0] }}</div>
@@ -58,65 +58,36 @@
               {% if forloop.first == false %}
                 {% if abstracts.size == 1 %}
                   {% for abstract in abstracts %}
-                    <div class="marginless-col col s12">
 
                       {% include marginless_card_panel.html %}
 
-                    </div>     
                   {% endfor %}               
                 {% elsif abstracts.size == 2 %}
                   {% for abstract in abstracts %}
-                    {% if forloop.last == false %}
-                      <div class="marginless-col col s12 m6">
                         
                         {% include marginless_card_panel.html %}
 
-                      </div>
-                    {% else %}
-                      <div class="marginless-col col s12 m6">
-                        
-                        {% include marginless_card_panel.html %}
 
-                      </div>
-                    {% endif %}
                   {% endfor %}
                 {% elsif abstracts.size == 3 %}
                   {% for abstract in abstracts %}
-                    {% if forloop.index == 1 %}
-                      <div class="marginless-col col s12">
+                    
+                      {% include marginless_card_panel.html %}
                         
-                        {% include marginless_card_panel.html %}
-
-                      </div>
-                    {% else %}
-                      <div class="marginless-col col s12 m6">
-                        
-                        {% include marginless_card_panel.html %}
-
-                      </div>
-                    {% endif %}
                   {% endfor %}
                 {% else %}
                   {% assign modulo = {{ abstracts | size | modulo:2 }} %}
                   {% if modulo == 0 %}
                     {% for abstract in abstracts %}
-                      <div class="marginless-col col s12 m6">
                         
                         {% include marginless_card_panel.html %}
 
-                      </div>
                     {% endfor %}
                   {% else %}
                     {% for abstract in abstracts %}
-                      {% if forloop.first == true %}
-                        <div class="marginless-col col s12">
-                          {% include marginless_card_panel.html %}
-                        </div>
-                      {% else %}
-                        <div class="marginless-col col s12 m6">
-                          {% include marginless_card_panel.html %}
-                        </div>
-                      {% endif %}
+
+                        {% include marginless_card_panel.html %}
+
                     {% endfor %}
                   {% endif %}
                 {% endif %}
