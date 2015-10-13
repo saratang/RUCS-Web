@@ -8,6 +8,19 @@ category: "Computational Biology"
 permalink: "issues"
 ---
 
+##Workaround \textsc
+
+Use your favorite text editor and run the following four find/replace regex (ON THE MARKDOWN FILE) in order:
+
+| replace | with |
+| :-----: | :--: |
+| \\\{\\\\textsc\\\{(.*?)\\\}\\\} | \<span\>\<span style="font-variant:small-caps;"\>$1\</span\>\</span\> |
+| \$< | < |
+| >\$ | > |
+| >\( | >$ |
+
+You end up with: <span><span style="font-variant:small-caps;">Small Caps</span></span>
+
 ##Initial remarks
 Hey guys, this is the page where I'll be posting issues I have with the website or something:
 

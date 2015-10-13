@@ -9,7 +9,8 @@ category: "Artificial Intelligence"
 ##Introduction
 
 A priority queue is a fundamental abstract data type that supports two
-operations: ${\rm I{\small NSERT}}(k)$ and ${\textsc{Extract-Max}}$.
+operations: <span><span
+style="font-variant:small-caps;">Insert</span></span>$(k)$ and <span><span style="font-variant:small-caps;">Extract-Max</span></span>.
 Priority queues have many practical applications, especially in areas
 such as scheduling and event driven simulations. Some examples of
 applications of priority queues in distributed environments appear in
@@ -22,11 +23,11 @@ concurrent data structures in the asynchronous shared memory model are
 becoming increasingly important. In this model, each process can take an
 arbitrary amount of time between steps and may crash. Processes
 communicate by reading from and writing to shared registers, and by
-accessing LL/SC objects. If $x$ is an ${\textsc{LL}}/{\textsc{SC}}$
-object, then ${\textsc{LL}}(x)$ reads $x$. ${\textsc{SC}}(x, v)$ by
+accessing LL/SC objects. If $x$ is an <span><span style="font-variant:small-caps;">LL</span></span>/<span><span style="font-variant:small-caps;">SC</span></span>
+object, then <span><span style="font-variant:small-caps;">LL</span></span>$(x)$ reads $x$. <span><span style="font-variant:small-caps;">SC</span></span>$(x, v)$ by
 process $p$ writes $v$ to $x$ if $x$ has not been written to by an
-${\textsc{SC}}$ operation since the last time $p$ performed
-${\textsc{LL}}(x)$. If ${\textsc{SC}}(x, v)$ writes $v$ to $x$ then it
+<span><span style="font-variant:small-caps;">SC</span></span> operation since the last time $p$ performed
+<span><span style="font-variant:small-caps;">LL</span></span>$(x)$. If <span><span style="font-variant:small-caps;">SC</span></span>$(x, v)$ writes $v$ to $x$ then it
 returns <span><span style="font-variant:small-caps;">True</span></span>.
 Otherwise it returns <span><span
 style="font-variant:small-caps;">False</span></span>.
@@ -49,23 +50,23 @@ This is the best wait-free implementation known.
 
 In 2005, Jayanti and Petrovic @JP showed how to implement
 single-dequeuer queues with step complexity $\Theta(\log{}n)$ for both
-${\textsc{Enqueue}}$ and ${\textsc{Dequeue}}$.
+<span><span style="font-variant:small-caps;">Enqueue</span></span> and <span><span style="font-variant:small-caps;">Dequeue</span></span>.
 
 Inspired by this queue implementation, we consider a priority queue
-where only one process is allowed to perform ${\textsc{Extract-Max}}$.
+where only one process is allowed to perform <span><span style="font-variant:small-caps;">Extract-Max</span></span>.
 Our single-extractor priority queue implementation uses single word
-${\textsc{LL}}$/${\textsc{SC}}$ objects. It is wait-free and has step
-complexity for both ${\textsc{Insert}}$ and ${\textsc{Extract-Max}}$,
+<span><span style="font-variant:small-caps;">LL</span></span>/<span><span style="font-variant:small-caps;">SC</span></span> objects. It is wait-free and has step
+complexity for both <span><span style="font-variant:small-caps;">Insert</span></span> and <span><span style="font-variant:small-caps;">Extract-Max</span></span>,
 where $n$ is the number of inserters and $m$ is the maximum number of
 elements in the priority queue during the operation.
 
 Our implementation uses a single-inserter single-deleter (SISD) ordered
-multiset, which supports insertion (${\textsc{SISD-Insert}}$) and
-deletion (${\textsc{SISD-Delete}}$) with $O(\log{r})$ step complexity,
+multiset, which supports insertion (<span><span style="font-variant:small-caps;">SISD-Insert</span></span>) and
+deletion (<span><span style="font-variant:small-caps;">SISD-Delete</span></span>) with $O(\log{r})$ step complexity,
 where $r$ is the maximum number of elements in the multiset during the
-operation. Finding the maximum element (${\textsc{SISD-FindMax}}$) can
+operation. Finding the maximum element (<span><span style="font-variant:small-caps;">SISD-FindMax</span></span>) can
 be done with constant step complexity. Both the inserter and the deleter
-can perform ${\textsc{SISD-FindMax}}$.
+can perform <span><span style="font-variant:small-caps;">SISD-FindMax</span></span>.
 
 ##The Construction
 
@@ -75,20 +76,20 @@ binary tree with $n$ leaves. Each leaf corresponds to one inserting
 process. At each leaf, there is a single-inserter single-deleter (SISD)
 ordered multiset. Each internal node stores the largest key in its
 subtree as well as the index of the leaf that the key came from. An
-${\textsc{Insert}}$ operation first inserts into its own SISD multiset
+<span><span style="font-variant:small-caps;">Insert</span></span> operation first inserts into its own SISD multiset
 and then helps propagate the largest key up the complete binary tree. An
-${\textsc{Extract-Max}}$ operation reads the largest key from the root
+<span><span style="font-variant:small-caps;">Extract-Max</span></span> operation reads the largest key from the root
 of the binary tree, deletes it from the SISD multiset of the appropriate
 leaf, and propagates the new maximum up the binary tree. We use an SISD
 multiset rather than an SISD priority queue because, by the time an
-${\textsc{Extract-Max}}$ tries to delete a key from the SISD multiset of
+<span><span style="font-variant:small-caps;">Extract-Max</span></span> tries to delete a key from the SISD multiset of
 a leaf, it might no longer be the largest key in the leaf. Our
 single-extractor priority queue implementation is wait-free, and has
-step complexity for both ${\textsc{Insert}}$ and
-${\textsc{Extract-Max}}$, in addition to the time it takes to perform
+step complexity for both <span><span style="font-variant:small-caps;">Insert</span></span> and
+<span><span style="font-variant:small-caps;">Extract-Max</span></span>, in addition to the time it takes to perform
 the SISD multiset insert and delete operations. Note that any process
-can perform ${\textsc{Extract-Max}}$ as long as there is some way of
-guaranteeing that two or more ${\textsc{Extract-Max}}$ operations are
+can perform <span><span style="font-variant:small-caps;">Extract-Max</span></span> as long as there is some way of
+guaranteeing that two or more <span><span style="font-variant:small-caps;">Extract-Max</span></span> operations are
 not performed concurrently. The SISD multiset is implemented using a
 persistent AVL tree. Each process announces the operation it wishes to
 perform, and the processes alternate between helping each other when
@@ -101,11 +102,11 @@ be implemented in constant time.
 ##Future Work
 
 It would be interesting to obtain either a $\Omega(\log{n} + \log{m})$
-lower bound or a faster implmentation of ${\textsc{Insert}}$ or
-${\textsc{Extract-Max}}$. Improvements to the step complexities of
-${\textsc{SISD-Insert}}$ or ${\textsc{SISD-Delete}}$ will reduce the
-$\log{}m$ term in the step complexities of ${\textsc{Insert}}$ or
-${\textsc{Extract-Max}}$, respectively.
+lower bound or a faster implmentation of <span><span style="font-variant:small-caps;">Insert</span></span> or
+<span><span style="font-variant:small-caps;">Extract-Max</span></span>. Improvements to the step complexities of
+<span><span style="font-variant:small-caps;">SISD-Insert</span></span> or <span><span style="font-variant:small-caps;">SISD-Delete</span></span> will reduce the
+$\log{}m$ term in the step complexities of <span><span style="font-variant:small-caps;">Insert</span></span> or
+<span><span style="font-variant:small-caps;">Extract-Max</span></span>, respectively.
 
 #### Acknowledgements <!---{#acknowledgements .unnumbered}-->
 
