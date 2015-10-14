@@ -1744,7 +1744,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
+h1, .post-title, .post-meta {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -5559,14 +5559,14 @@ html {
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 15px; } }
-h1, h2, h3, h4, h5, h6 {
+h1, .post-title, .post-meta, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.1; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, .post-title a, .post-meta a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
 
-h1 {
+h1, .post-title, .post-meta {
   font-size: 4.2rem;
   line-height: 110%;
   margin: 2.1rem 0 1.68rem 0; }
@@ -6249,7 +6249,7 @@ a.waves-effect .waves-ripple {
 @media only screen and (max-width: 992px) {
   .modal {
     width: 80%; } }
-.modal h1, .modal h2, .modal h3, .modal h4 {
+.modal h1, .modal .post-title, .modal .post-meta, .modal h2, .modal h3, .modal h4 {
   margin-top: 0; }
 
 .modal .modal-content {
@@ -8406,23 +8406,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html * {
   font-family: "CMU Serif"; }
 
-h1 {
-  font-size: 3.56rem; }
-
-h2 {
+h1, .post-title, .post-meta {
   font-size: 2.92rem; }
 
-h3 {
+h2 {
   font-size: 2.28rem; }
 
-h4 {
+h3 {
   font-size: 1.64rem; }
 
-h5 {
+h4 {
   font-size: 1rem; }
 
-h6 {
+h5 {
   font-size: 0.6rem; }
+
+h6 {
+  font-size: 0.2rem; }
 
 .icon-block {
   padding: 0 15px; }
@@ -8515,11 +8515,12 @@ h6 {
   width: 50%; }
 
 .post-header {
-  margin: 10em 0 0 0; }
+  margin: 10em 0 0 0;
+  text-align: center; }
 
 .post-title, .post-meta {
-  text-align: center;
-  font-family: "CMU Serif"; }
+  font-family: "CMU Serif";
+  font-size: 3.56rem; }
 
 .post-meta {
   font-size: 1.1em; }

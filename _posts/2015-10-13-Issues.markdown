@@ -8,41 +8,20 @@ category: "Computational Biology"
 permalink: "issues"
 ---
 
-##Workaround \textsc
+##How to Format Things
 
-Use your favorite text editor and run the following four find/replace regex (ON THE MARKDOWN FILE) in order:
+###If you need to deal with \text{sc}
+At least in the sample, they were all under a new command called \\proc. So we got around this by removing the delimiters (the $ signs) around every instance of \\proc in the .tex file. So do this first.
 
-| replace | with |
-| :-----: | :--: |
-| \\\{\\\\textsc\\\{(.*?)\\\}\\\} | \<span\>\<span style="font-variant:small-caps;"\>$1\</span\>\</span\> |
-| \$< | < |
-| >\$ | > |
-| >\( | >$ |
+###Converting with Pandoc
+You need to have three files before you can begin formatting: the original input.tex, a reference reference.bib, and the csl: ieee.csl. First, run the following in the command-line:
 
-You end up with: <span><span style="font-variant:small-caps;">Small Caps</span></span>
+pandoc "input.tex" -o output.html --bibliography references.bib --csl ieee.csl --mathjax
 
-##Alternative work-around for \textsc
-Remove $$ from proc calls (in .tex file).
+You should have an output file called output.html in the same directory. Add \<h1\>Reference\</h1\> right after \<div class="references"\> near the bottom of the html.
 
-##Getting references
-Run the following in the command-line:
-
-pandoc "input.tex" -o output.html --bibliography references.bib --csl ieee.csl --webtex
-
-Make sure you have ieee.csl :P and that you add a Reference header at the bottom of input.tex.
-
-##Initial remarks
-Hey guys, this is the page where I'll be posting issues I have with the website or something:
-
-- I don't think Pandoc can implement LaTeX rendering on its own, so I've also thrown MathJax into the website (if you don't like MathJax, or can suggest a workaround, I'm all ears!). Right now, MathJax is loaded from the CDN, if you think it's better to have a local copy, I can add one.
-- The sample article has a lot of --> $\textsc{Small Caps}$, which cannot be rendered in MathJax :( Instead, I have a few work-arounds:
-	- ${\rm S{\small MALL} C{\small APS}}$ which is typed up as follows: {\rm S{\small MALL} C{\small APS}}
-	- $\textbf{SmallCaps}$ which is typed up as follows: \textbf{Small Caps}
-	- ${\rm SMALL CAPS}$ which is typed up as follows: {\rm SMALL CAPS}
-
-##Formatting the header thing that Jekyll needs
-
-Each article has that header thingie (enclosed by three dashes: "\-\-\-"), I don't remember if Pandoc automatically generates them or not, but here is what is in the header for the sample article:
+###That Header Stuff
+Add the header stuff that Jekyll needs to the top of output.html:
 
 \-\-\-\\
 layout: post\\
@@ -54,9 +33,9 @@ category: "Artificial Intelligence"\\
 
 A couple of notes:
 
-* The layout must be post!
+* The layout must be "post"!
 * The title is whatever you want to appear on the table of contents and at the top of the page of the abstract itself
-* The author(s) is stored as a string, containing all the authors
+* The author(s) is stored as a string
 * I don't remember if the date is automatically generated or not
 * The category is one of "Artificial Intelligence", "Computational Biology", "Computational Graphics", "Human Computer Interaction", "Software Engineering", or "Software Projects". And capitalization matters!
 * If, for some reason, there is a .css file included with the abstract, and the abstract looks very strange without the css formatting, you can drag that .css file into the /css/abstracts folder. Then in the header, simply add:
@@ -66,11 +45,9 @@ css: [name-of-css-file].css
 
 PS: I don't know which category the sample article falls under, I've set it as Artificial Intelligence because it's the first one alphabetically :P
 
-##Formatting the article itself
+###More formatting
+You should now have a .html file that is more-or-less ready to be put into _posts. Remember to name the file with the form YYYY-MM-DD-title.html or Jekyll won't recognize that this is a post...
 
-I didn't run into many issues with converting .tex to .md, (except for the one mentioned above). Some alterations I've made:
-
-* Every header got moved down one level, because Liquid automagically chooses the title from the header information and makes it h1. So (at least for the sample article), I moved every subtitle to have h2, and every sub-sub title to have h3.
 
 ##Fonts
 I'm using Computer Modern in the abstracts, I believe it supports *italics*, <b>bold</b>, and whatever this is => ${\rm Roman? Semi-bold?}$ Whatever it is, it's rendered using {\rm texthere} in LaTeX.
