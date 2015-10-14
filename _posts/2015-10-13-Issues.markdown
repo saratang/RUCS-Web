@@ -21,6 +21,16 @@ Use your favorite text editor and run the following four find/replace regex (ON 
 
 You end up with: <span><span style="font-variant:small-caps;">Small Caps</span></span>
 
+##Alternative work-around for \textsc
+Remove $$ from proc calls (in .tex file).
+
+##Getting references
+Run the following in the command-line:
+
+pandoc "input.tex" -o output.html --bibliography references.bib --csl ieee.csl --webtex
+
+Make sure you have ieee.csl :P and that you add a Reference header at the bottom of input.tex.
+
 ##Initial remarks
 Hey guys, this is the page where I'll be posting issues I have with the website or something:
 
