@@ -135,32 +135,43 @@ h6 {
 @media #{$large-and-up} {
     // styles for large screens and up
     .marginless-card-panel-container {
-	width: 50%;
-	height: 50%;
-	overflow: scroll;
+	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+	    // box-shadow:inset 0px 0px 0px 4px white;
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: solid 4px $primary-color;
+		width: 50%;
+		height: 50%;
+		overflow: scroll;
 	}
 }
 
 @media#{$medium-and-down} {
 	// styles for medium screens and down
 	.marginless-card-panel-container {
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: solid 4px $primary-color;
 		width: 100%;
 	}
 }
 
 .marginless-card-panel-container:hover{
-    -webkit-box-shadow:inset 0px 0px 0px 4px white;
-    -moz-box-shadow:inset 0px 0px 0px 4px white;
-    box-shadow:inset 0px 0px 0px 4px white;
+    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+    // box-shadow:inset 0px 0px 0px 4px white;
+    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: solid 4px white;
 }
 
 .marginless-card-panel {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
 	padding: 20px;
 	background-color: $primary-color;
-	margin: 4px;
 	border-radius: 0;
 	.title {
 		font-weight: bold;

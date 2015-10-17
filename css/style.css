@@ -8437,24 +8437,29 @@ h6 {
 
 @media only screen and (min-width: 993px) {
   .marginless-card-panel-container {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid 4px #0097a7;
     width: 50%;
     height: 50%;
     overflow: scroll; } }
 @media only screen and (max-width: 992px) {
   .marginless-card-panel-container {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid 4px #0097a7;
     width: 100%; } }
 .marginless-card-panel-container:hover {
-  -webkit-box-shadow: inset 0px 0px 0px 4px white;
-  -moz-box-shadow: inset 0px 0px 0px 4px white;
-  box-shadow: inset 0px 0px 0px 4px white; }
-
-.marginless-card-panel {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  border: solid 4px white; }
+
+.marginless-card-panel {
   padding: 20px;
   background-color: #0097a7;
-  margin: 4px;
   border-radius: 0; }
   .marginless-card-panel .title {
     font-weight: bold;
