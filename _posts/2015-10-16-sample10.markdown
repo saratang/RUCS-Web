@@ -3,7 +3,7 @@ layout: post
 title:  "Lorem Ipsum"
 author: "Lorem Ipsum"
 date:   2015-10-02 20:44:52
-category: "Computer Vision"
+category: "Natural Language Processing"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra nisi sed diam blandit venenatis. Aenean tempus metus tellus, vitae condimentum nulla commodo lacinia. Suspendisse nisl eros, mollis nec orci lobortis, rhoncus finibus ante. Sed egestas luctus massa, eget aliquet nulla commodo id. Nunc faucibus nisl risus, eu efficitur magna tempus at. Nunc varius, risus vel venenatis fringilla, velit lorem consectetur ligula, ut rutrum erat lacus vitae neque. Nunc egestas molestie auctor. Proin suscipit lectus id velit cursus, a ornare felis venenatis. Phasellus eleifend tincidunt iaculis. Vestibulum feugiat lectus nec arcu auctor viverra. Etiam sollicitudin lorem massa, a placerat mi ullamcorper a. Nulla felis mi, vehicula et lobortis a, gravida vitae neque. Nulla facilisi. Aenean tempus purus non vulputate bibendum. Fusce hendrerit interdum dolor, eu vehicula magna luctus et.

@@ -8495,8 +8495,7 @@ h6 {
   padding: 20px;
   background-color: color("cyan", "darken-2");
   margin: 0;
-  border-radius: 0;
-  overflow: scroll; }
+  border-radius: 0; }
   .marginless-card-panel .title {
     font-weight: bold;
     font-size: 2em;
@@ -8526,7 +8525,7 @@ h6 {
 .marginless-collection {
   margin: 0 !important;
   border: 0;
-  height: 406px;
+  height: 534px;
   background-color: white;
   border-radius: 0; }
 
@@ -8579,13 +8578,13 @@ h6 {
   align-content: stretch; }
 
 .height-fix {
-  max-height: 406px !important;
-  height: 406px;
+  max-height: 534px !important;
+  height: 534px;
   overflow: hidden !important; }
 
 #toc-content, #toc-content-wrapper {
-  max-height: 406px !important;
-  height: 406px;
+  max-height: 534px !important;
+  height: 534px;
   overflow: hidden !important; }
 
 .card-active {

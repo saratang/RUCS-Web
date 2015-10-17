@@ -46,6 +46,7 @@ $primary-color-dark: color('cyan', 'darken-3') !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url(../resources/backgroundweb.svg);
+$toc-height: 534px;
 
 html * {
 	font-family: $post-font;
@@ -137,7 +138,6 @@ h6 {
 	background-color: $primary-color;
 	margin: 0;
 	border-radius: 0;
-	overflow: scroll;
 	.title {
 		font-weight: bold;
 		font-size: 2em;
@@ -175,7 +175,7 @@ h6 {
 .marginless-collection {
 	margin: 0 !important;
 	border: 0;
-	height: 406px;
+	height: $toc-height;
 	background-color: white;
 	border-radius: 0;
 }
@@ -243,14 +243,14 @@ h6 {
 }
 
 .height-fix {
-	max-height: 406px !important;
-	height: 406px;
+	max-height: $toc-height !important;
+	height: $toc-height;
 	overflow: hidden !important;
 }
 
 #toc-content, #toc-content-wrapper {
-	max-height: 406px !important;
-	height: 406px;
+	max-height: $toc-height !important;
+	height: $toc-height;
 	overflow: hidden !important;
 }
 
