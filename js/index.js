@@ -12,9 +12,9 @@
 
 	$(".collection-item").click(function(e) {
 		element_id = $(this).attr('href');
-		$(".collection").children().removeClass('active');
+		$(".collection").children().removeClass('chapter-active');
 		$(".collection").children().removeClass('disabled');
-		$(this).addClass('active');
+		$(this).addClass('chapter-active');
 		$(this).addClass('disabled');
 		$(".toc-content").children().hide();
 		$(element_id).show();

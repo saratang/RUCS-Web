@@ -41,12 +41,10 @@
 	font-style: italic;
 }
 
-$primary-color: color('cyan', 'darken-2') !default;
-$primary-color-dark: color('cyan', 'darken-3') !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
-$background: url(../resources/backgroundweb.svg);
-$toc-height: 554px;
+$background: url("../resources/backgroundweb.svg");
+$toc-height: 598px;
 
 html * {
 	font-family: $post-font;
@@ -95,6 +93,10 @@ h6 {
 	margin-right: 2px;
 }
 
+.chapter-active {
+	border-right: 4px solid $primary-color-dark !important;
+}
+
 .background {
 	@extend .full-height;
 	background: $background;
@@ -130,13 +132,35 @@ h6 {
 	padding: 0 !important;
 }
 
+@media #{$large-and-up} {
+    // styles for large screens and up
+    .marginless-card-panel-container {
+	width: 50%;
+	height: 50%;
+	overflow: scroll;
+	}
+}
+
+@media#{$medium-and-down} {
+	// styles for medium screens and down
+	.marginless-card-panel-container {
+		width: 100%;
+	}
+}
+
+.marginless-card-panel-container:hover{
+    -webkit-box-shadow:inset 0px 0px 0px 4px white;
+    -moz-box-shadow:inset 0px 0px 0px 4px white;
+    box-shadow:inset 0px 0px 0px 4px white;
+}
+
 .marginless-card-panel {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	padding: 20px;
 	background-color: $primary-color;
-	margin: 0;
+	margin: 4px;
 	border-radius: 0;
 	.title {
 		font-weight: bold;
@@ -149,18 +173,6 @@ h6 {
 	.preview {
 		color: white;
 	}
-}
-
-.marginless-card-panel-container:hover{
-    -webkit-box-shadow:inset 0px 0px 0px 4px white;
-    -moz-box-shadow:inset 0px 0px 0px 4px white;
-    box-shadow:inset 0px 0px 0px 4px white;
-}
-
-.marginless-card-panel-container {
-	width: 50%;
-	height: 50%;
-	overflow: scroll;
 }
 
 .card-panel-unhover {
@@ -181,7 +193,13 @@ h6 {
 	overflow: scroll !important;
 }
 
-.marginless-col, .marginless-row {
+.marginless-col {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.marginless-row {
+	@extend .row;
 	margin: 0 !important;
 	padding: 0 !important;
 }
@@ -253,10 +271,6 @@ h6 {
 	max-height: $toc-height !important;
 	height: $toc-height;
 	overflow: hidden !important;
-}
-
-.card-active {
-	background-color: color("cyan", "lighten-1");
 }
 
 .parallax-container {

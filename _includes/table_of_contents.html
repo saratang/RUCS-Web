@@ -2,7 +2,7 @@
 
 <h2 class="brand-logo">RUCS</h2>
 <div class="height-fix">
-  <div class="row cyan darken-2">
+  <div class="marginless-row cyan darken-2">
     <div class="marginless-col col m4 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
@@ -12,7 +12,7 @@
 
         {% if forloop.first == true %}
 
-        <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-effect waves-light collection-item active">
+        <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="chapter-active waves-effect waves-light collection-item">
           <span class="toc-enum">Chapter {{ i }}</span></br>
           <span class="toc-title">{{ chapter[0] | capitalize }}</span>
         </a>
@@ -62,7 +62,7 @@
       </ul>
     </div>
 
-    <div class="marginless-col col s12 m8 l9 height-fix" id="toc-content-wrapper">
+    <div class="marginless-col col s12 m8 l9 height-fix hid-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
 
         {% for chapter in site.categories %}
