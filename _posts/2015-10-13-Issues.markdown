@@ -44,11 +44,11 @@ A couple of notes:
 css: [name-of-css-file].css
 
 ###Consistency formatting
-* Top-level section headings (e.g. "Introduction", "Conclusion") have <h1> tags
-* Sub-sections have <h3> tags
-* Acknowledgements and references have <h4> tags
-* Tables and images are inside a <figure> tag, with corresponding <figcaption> tags within the <figure> block.
-* Images are the _assets file, link them with {{site.baseurl}}/assets/IMAGE.JPG
+* Top-level section headings (e.g. "Introduction", "Conclusion") have \<h1\> tags
+* Sub-sections have \<h3\> tags
+* Acknowledgements and references have \<h4\> tags
+* Tables and images are inside a \<figure\> tag, with corresponding <figcaption> tags within the \<figure\> block.
+* Images are the _assets file, link them with \{\{site.baseurl\}\}/assets/IMAGE.JPG
 
 Some issues: tables have to be encoded in html manually
 
@@ -57,7 +57,7 @@ Some issues: tables have to be encoded in html manually
 You should now have a .html file that is more-or-less ready to be put into _posts. Remember to name the file with the form YYYY-MM-DD-title.html or Jekyll won't recognize that this is a post...
 
 ##Fonts
-I'm using Computer Modern in the abstracts, I believe it supports *italics*, <b>bold</b>, and whatever this is => ${\rm Roman? Semi-bold?}$ Whatever it is, it's rendered using {\rm texthere} in LaTeX.
+I'm using Computer Modern in the abstracts, I believe it supports *italics*, <b>bold</b>, <i><b>BOTH</b></i> and whatever this is => ${\rm Roman? Semi-bold?}$ Whatever it is, it's rendered using {\rm texthere} in LaTeX.
 
 ##Finally...
 Finally, you can fork the website from my repo:
