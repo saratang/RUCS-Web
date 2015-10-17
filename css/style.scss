@@ -8,6 +8,39 @@
 
 @import 'materialize';
 
+@font-face {
+	font-family: 'Code Pro Demo';
+	src: url('../font/code-pro-demo/Code_Pro_Demo.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunrm.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunti.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunbx.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CMU Serif';
+	src: url('../font/cmu-serif/cmunbi.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
 $primary-color: color('cyan', 'darken-2') !default;
 $primary-color-dark: color('cyan', 'darken-3') !default;
 $web-title: "Code Pro Demo";
