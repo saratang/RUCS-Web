@@ -6,7 +6,7 @@ layout: default
 <a href="{{ site.baseurl }}/#table-of-contents" class="waves-effect waves-cyan btn-large darken-2">Back</a>
   <header class="post-header">
     <span class="post-title">{{ page.title }}</span>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %}{{ page.author }}{% endif %}{% if page.supervisors %}<br>under the supervision of {{ page.supervisors }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{% if page.author %}{{ page.author }}{% endif %}{% if page.supervisors %}<br>under the supervision of {{ page.supervisors }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
   <article class="post-content">

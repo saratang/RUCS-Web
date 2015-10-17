@@ -8525,9 +8525,10 @@ h6 {
 .marginless-collection {
   margin: 0 !important;
   border: 0;
-  height: 534px;
+  height: 554px;
   background-color: white;
-  border-radius: 0; }
+  border-radius: 0;
+  overflow: scroll !important; }
 
 .marginless-col, .marginless-row {
   margin: 0 !important;
@@ -8578,13 +8579,13 @@ h6 {
   align-content: stretch; }
 
 .height-fix {
-  max-height: 534px !important;
-  height: 534px;
+  max-height: 554px !important;
+  height: 554px;
   overflow: hidden !important; }
 
 #toc-content, #toc-content-wrapper {
-  max-height: 534px !important;
-  height: 534px;
+  max-height: 554px !important;
+  height: 554px;
   overflow: hidden !important; }
 
 .card-active {
@@ -8598,6 +8599,9 @@ h6 {
 
 .bottom {
   position: absolute; }
+
+.acknowledgements, .references {
+  font-size: 0.8rem; }
 
 .page-footer {
   background: url(../resources/backgroundweb.svg); }

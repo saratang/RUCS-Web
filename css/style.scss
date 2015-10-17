@@ -46,7 +46,7 @@ $primary-color-dark: color('cyan', 'darken-3') !default;
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url(../resources/backgroundweb.svg);
-$toc-height: 534px;
+$toc-height: 554px;
 
 html * {
 	font-family: $post-font;
@@ -178,6 +178,7 @@ h6 {
 	height: $toc-height;
 	background-color: white;
 	border-radius: 0;
+	overflow: scroll !important;
 }
 
 .marginless-col, .marginless-row {
@@ -268,6 +269,10 @@ h6 {
 
 .bottom {
 	position: absolute;
+}
+
+.acknowledgements, .references {
+	font-size: 0.8rem;
 }
 
 .page-footer {
