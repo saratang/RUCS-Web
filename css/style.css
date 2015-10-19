@@ -8391,6 +8391,12 @@ h5 {
 h6 {
   font-size: 0.2rem; }
 
+img {
+  max-width: 100%; }
+
+figcaption {
+  font-size: 1rem; }
+
 .icon-block {
   padding: 0 15px; }
 
@@ -8463,8 +8469,9 @@ h6 {
   border-radius: 0; }
   .marginless-card-panel .title {
     font-weight: bold;
-    font-size: 2em;
-    color: white; }
+    font-size: 1.5em;
+    color: white;
+    line-height: 2rem; }
   .marginless-card-panel .author {
     color: white; }
   .marginless-card-panel .preview {
@@ -8480,7 +8487,7 @@ h6 {
 .marginless-collection {
   margin: 0 !important;
   border: 0;
-  height: 598px;
+  height: 512px;
   background-color: white;
   border-radius: 0;
   overflow: scroll !important; }
@@ -8537,14 +8544,9 @@ h6 {
   flex-wrap: wrap;
   align-content: stretch; }
 
-.height-fix {
-  max-height: 598px !important;
-  height: 598px;
-  overflow: hidden !important; }
-
-#toc-content, #toc-content-wrapper {
-  max-height: 598px !important;
-  height: 598px;
+.height-fix, #toc-content, #toc-content-wrapper {
+  max-height: 512px !important;
+  height: 512px;
   overflow: hidden !important; }
 
 .parallax-container {

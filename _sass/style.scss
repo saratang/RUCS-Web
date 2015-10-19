@@ -44,7 +44,7 @@
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url("../resources/backgroundweb.svg");
-$toc-height: 598px;
+$toc-height: 512px;
 
 html * {
 	font-family: $post-font;
@@ -75,6 +75,14 @@ h5 {
 h6 {
 	@extend h6;
 	font-size: 0.2rem; }
+
+img {
+	max-width: 100%;
+}
+
+figcaption {
+	font-size: 1rem;
+}
 
 .icon-block {
   padding: 0 15px;
@@ -175,8 +183,9 @@ h6 {
 	border-radius: 0;
 	.title {
 		font-weight: bold;
-		font-size: 2em;
+		font-size: 1.5em;
 		color: white;
+		line-height: 2rem;
 	}
 	.author {
 		color: white;
@@ -272,13 +281,7 @@ h6 {
 	align-content: stretch;
 }
 
-.height-fix {
-	max-height: $toc-height !important;
-	height: $toc-height;
-	overflow: hidden !important;
-}
-
-#toc-content, #toc-content-wrapper {
+.height-fix, #toc-content, #toc-content-wrapper {
 	max-height: $toc-height !important;
 	height: $toc-height;
 	overflow: hidden !important;
