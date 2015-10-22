@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Distributed Reference Counting for Asynchronous Shared Memory"
-author: "Dan Plyukhin"
+author: "Daniil Plyukhin"
 supervisors: "Professor Faith Ellen"
 category: "Theory of Computation"
 ---
@@ -16,25 +16,27 @@ category: "Theory of Computation"
 <p>Suppose that multiple processes operate on a data structure, executing at various speeds. Reference counting is nontrivial in this model: A process <span class="math inline">\(P\)</span> at node <span class="math inline">\(N\)</span> intending to increment the reference count of node <span class="math inline">\(M\)</span>, pointed to by <span class="math inline">\(N.next\)</span>, must read the pointer value before incrementing the count. During the interval between these two instructions, another process <span class="math inline">\(Q\)</span> may modify <span class="math inline">\(N.next\)</span> and decrement <span class="math inline">\(M\)</span>’s reference count. If <span class="math inline">\(Q\)</span> resets <span class="math inline">\(M.rc\)</span> to 0, then it may reclaim <span class="math inline">\(M\)</span> before <span class="math inline">\(P\)</span> can increment the count.</p>
 <p>There are many memory reclamation schemes, each with advantages and disadvantages. An excellent survey can be found in <span class="citation">[1]</span>. A distributed variant of reference counting was introduced by Lee <span class="citation">[2]</span> for a particular data structure, and the goal of this research was to generalize it to arbitrary shared data structures. The result is efficient and applicable in the same contexts as ordinary reference counting.</p>
 
-<div class="algorithm">
+<p class="algorithm">
     <p><b>function</b><em> fetch-and-add </em><span class="math inline">\( (\mathcal{O}, i)\)</span></p>
     <blockquote>
         <p><span class="math inline">\(x \gets \mathcal{O}\)</span></p>
         <p><span class="math inline">\(\mathcal{O} \gets x + i\)</span></p>
         <p><b>return</b> <span class="math inline">\(x\)</span></p>
     </blockquote>
-</div>
+    <br/>
+</p>
 
-<div class="algorithm">
+<p class="algorithm">
     <p><b>function</b><em> fetch-and-store </em><span class="math inline">\( (\mathcal{O}, y)\)</span></p>
     <blockquote>
         <p><span class="math inline">\(x \gets \mathcal{O}\)</span></p>
         <p><span class="math inline">\(\mathcal{O} \gets y\)</span></p>
         <p><b>return</b> <span class="math inline">\(x\)</span></p>
     </blockquote>
-</div>
+    <br/>
+</p>
 
-<div class="algorithm">
+<p class="algorithm">
     <p><b>function</b><em> compare-and-swap </em><span class="math inline">\( (\mathcal{O}, old, new)\)</span></p>
     <blockquote>
         <p><b>if </b><span class="math inline">\( \mathcal{O} = old \)</span><b> then</b></p>
@@ -44,7 +46,7 @@ category: "Theory of Computation"
         </blockquote>
         <p><b>return</b> <span class="math inline">\(F\)</span></p>
     </blockquote>
-</div>
+</p>
 
 <h1 id="the-asynchronous-shared-memory-model">II. The asynchronous shared memory model</h1>
 <p>We assume a model in which <span class="math inline">\(n\)</span> processes operate on a data structure, communicating only using shared memory. Processes may be asynchronous, meaning they can be delayed arbitrarily after any instruction and are prone to crash failure, possibly leaving their operation uncompleted.</p>
