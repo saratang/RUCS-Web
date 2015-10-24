@@ -8373,24 +8373,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html * {
   font-family: "CMU Serif"; }
 
-h1, .post-title, .post-meta {
-  font-size: 2.92rem; }
-
-h2 {
-  font-size: 2.28rem; }
-
-h3 {
-  font-size: 1.64rem; }
-
-h4 {
-  font-size: 1rem; }
-
-h5 {
-  font-size: 0.6rem; }
-
-h6 {
-  font-size: 0.2rem; }
-
 img {
   max-width: 100%; }
 
@@ -8457,6 +8439,69 @@ figcaption {
     -webkit-box-sizing: border-box;
     border: solid 4px #0097a7;
     width: 100%; } }
+@media only screen and (min-width: 601px) {
+  .height-fix, #toc-content, #toc-content-wrapper {
+    max-height: 512px !important;
+    height: 512px;
+    overflow: hidden !important; }
+
+  h1, .post-title, .post-meta {
+    font-size: 2.92rem; }
+
+  h2 {
+    font-size: 2.28rem; }
+
+  h3 {
+    font-size: 1.64rem; }
+
+  h4 {
+    font-size: 1rem; }
+
+  h5 {
+    font-size: 0.6rem; }
+
+  h6 {
+    font-size: 0.2rem; }
+
+  .post-container {
+    width: 50%; } }
+@media only screen and (max-width: 600px) {
+  .collapsible-toc {
+    height: 100%;
+    min-width: 100%; }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    line-height: 2rem; }
+
+  .author {
+    color: white; }
+
+  .preview {
+    color: white; }
+
+  h1, .post-title, .post-meta {
+    font-size: 2.28rem; }
+
+  h2 {
+    font-size: 1.64rem; }
+
+  h3 {
+    font-size: 1rem; }
+
+  h4 {
+    font-size: 1rem; }
+
+  h5 {
+    font-size: 1rem; }
+
+  h6 {
+    font-size: 1rem; }
+
+  .post-container {
+    width: 75%; } }
 .marginless-card-panel-container:hover {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8500,9 +8545,6 @@ figcaption {
   margin: 0 !important;
   padding: 0 !important; }
 
-.post-container {
-  width: 50%; }
-
 .post-header {
   margin: 10em 0 0 0;
   text-align: center; }
@@ -8544,11 +8586,6 @@ figcaption {
   flex-wrap: wrap;
   align-content: stretch; }
 
-.height-fix, #toc-content, #toc-content-wrapper {
-  max-height: 512px !important;
-  height: 512px;
-  overflow: hidden !important; }
-
 .parallax-container {
   height: 200px !important; }
 
@@ -8563,5 +8600,8 @@ figcaption {
 
 .page-footer {
   background: url("../resources/backgroundweb.svg"); }
+
+.full-width {
+  min-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

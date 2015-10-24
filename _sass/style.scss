@@ -50,32 +50,6 @@ html * {
 	font-family: $post-font;
 }
 
-h1 {
-	@extend h1;
-	font-size: 2.92rem;
-}
-
-h2 {
-	@extend h2;
-	font-size: 2.28rem;
-}
-
-h3 {
-  	@extend h3;
-  	font-size: 1.64rem; }
-
-h4 {
-	@extend h4;
-	font-size: 1rem; }
-
-h5 {
-	@extend h5;
-	font-size: 0.6rem; }
-
-h6 {
-	@extend h6;
-	font-size: 0.2rem; }
-
 img {
 	max-width: 100%;
 }
@@ -167,6 +141,67 @@ figcaption {
 	}
 }
 
+@media#{$medium-and-up} {
+	.height-fix, #toc-content, #toc-content-wrapper {
+	max-height: $toc-height !important;
+	height: $toc-height;
+	overflow: hidden !important;
+	}
+
+	h1 {
+		font-size: 2.92rem;
+		}
+
+	h2 {
+		font-size: 2.28rem;
+	}
+	h3 {
+	  	font-size: 1.64rem; }
+
+	h4 {
+		font-size: 1rem; }
+
+	h5 {
+		font-size: 0.6rem; }
+
+	h6 {
+		font-size: 0.2rem; }
+
+	.post-container {
+		width: 50%;
+	}
+}
+
+@media#{$small-and-down} {
+	.collapsible-toc {
+		height: 100%;
+		min-width: 100%;
+	}
+	.title {
+		font-weight: bold;
+		font-size: 1.5em;
+		color: white;
+		line-height: 2rem;
+	}
+	.author {
+		color: white;
+	}
+	.preview {
+		color: white;
+	}
+
+	h1 { font-size: 2.28rem; }
+	h2 { font-size: 1.64rem; }
+	h3 { font-size: 1rem; }
+	h4 { font-size: 1rem; }
+	h5 { font-size: 1rem; }
+	h6 { font-size: 1rem; }
+
+	.post-container {
+		width: 75%;
+	}
+}
+
 .marginless-card-panel-container:hover{
     // -webkit-box-shadow:inset 0px 0px 0px 4px white;
     // -moz-box-shadow:inset 0px 0px 0px 4px white;
@@ -224,10 +259,6 @@ figcaption {
 	padding: 0 !important;
 }
 
-.post-container {
-	width: 50%;
-}
-
 .post-header {
 	margin: 10em 0 0 0;
 	text-align: center;
@@ -281,11 +312,11 @@ figcaption {
 	align-content: stretch;
 }
 
-.height-fix, #toc-content, #toc-content-wrapper {
-	max-height: $toc-height !important;
-	height: $toc-height;
-	overflow: hidden !important;
-}
+// .height-fix, #toc-content, #toc-content-wrapper {
+// 	max-height: $toc-height !important;
+// 	height: $toc-height;
+// 	overflow: hidden !important;
+// }
 
 .parallax-container {
 	height: 200px !important;
@@ -305,4 +336,8 @@ figcaption {
 
 .page-footer {
 	background: $background;
+}
+
+.full-width {
+	min-width: 100%;
 }
