@@ -7,6 +7,43 @@ date:   2015-10-12 03:39:52
 permalink: "issues"
 ---
 
+##Things to fix:
+
+###Header
+* remove the overhanging menu on the home page if possible (only keep it for the individual articles)
+* replace the enter button with a downward arrow (no text; see the Nautilus home page for an example)
+
+###Table of Contents
+
+* remove the "RUCS" text right above the list of sections
+* don't include "Chapter 1", "Chapter 2" - just the section headings
+* no preview of the article in the cards (just title and author)
+* cards should look like the "basic cards" from Materialize (w.r.t. shadow, padding, etc)
+* cards should have distinct edges (it should look like they're floating on the background)
+* the vertical bar indicating which section is currently selected should be on the left of the column, not the right
+
+###Editor's Letter
+
+* no blue boundary editor's letter and list of categories (to differentiate the two sections, try a different color bg for the letter from the editor, such as grey or black)
+* there is no acknowledgements section (that's with the editor's letter)
+
+###Footer
+
+* for the footer, please remove the "About RUCS" heading and put as the one-sentence description: "RUCS is a non-archival publication featuring the best of undergraduate computer science research at the University of Toronto."
+* remove the "Made by Materialize" text at the bottom and the shadow box that it's in
+
+###Articles
+
+* center the content in tables
+* add horizontal lines only to tables
+* make unordered lists appear with bullet points
+* for each reference, indent every line except the first such that the text is always aligned (like it would be if the reference was an actual ordered list)
+* make references text size 13 font and the headings size 17 font
+* appendices should have the same title and body font as references
+* make sure images in figured are centered (only really applicable when they're not very large to begin with)
+* blockquotes inside <p class="algorithm"> should not have vertical lines showing indentation; otherwise, they're fine
+* replace the "Back" button with a back arrow if possible (no tail, looking more like a < sign )
+
 ##How to Format Things
 
 ###If you need to deal with \text{sc}
