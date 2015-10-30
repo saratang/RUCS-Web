@@ -50,7 +50,7 @@ html * {
 	font-family: $post-font;
 }
 
-img {
+img, figure {
 	max-width: 100%;
 }
 
@@ -92,11 +92,6 @@ figcaption {
 
 .height-100 {
 	height: 100%;
-}
-
-.review-title {
-	font-size: 10em;
-	font-family: $web-title;
 }
 
 .review-subtitle {
@@ -170,6 +165,11 @@ figcaption {
 	.post-container {
 		width: 50%;
 	}
+
+	.review-title {
+	font-size: 10em;
+	font-family: $web-title;
+	}
 }
 
 @media#{$small-and-down} {
@@ -198,8 +198,15 @@ figcaption {
 	h6 { font-size: 1rem; }
 
 	.post-container {
-		width: 75%;
+		width: 90%;
 	}
+
+	.review-title {
+	font-size: 8em;
+	font-family: $web-title;
+	}
+
+
 }
 
 .marginless-card-panel-container:hover{

@@ -8373,7 +8373,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 html * {
   font-family: "CMU Serif"; }
 
-img {
+img, figure {
   max-width: 100%; }
 
 figcaption {
@@ -8406,10 +8406,6 @@ figcaption {
 
 .height-100 {
   height: 100%; }
-
-.review-title {
-  font-size: 10em;
-  font-family: "Code Pro Demo"; }
 
 .review-subtitle {
   font-family: "Code Pro Demo";
@@ -8464,7 +8460,11 @@ figcaption {
     font-size: 0.2rem; }
 
   .post-container {
-    width: 50%; } }
+    width: 50%; }
+
+  .review-title {
+    font-size: 10em;
+    font-family: "Code Pro Demo"; } }
 @media only screen and (max-width: 600px) {
   .collapsible-toc {
     height: 100%;
@@ -8501,7 +8501,11 @@ figcaption {
     font-size: 1rem; }
 
   .post-container {
-    width: 75%; } }
+    width: 90%; }
+
+  .review-title {
+    font-size: 8em;
+    font-family: "Code Pro Demo"; } }
 .marginless-card-panel-container:hover {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
