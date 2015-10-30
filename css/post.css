@@ -8440,7 +8440,7 @@ figcaption {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: solid 4px #0097a7;
-    width: 100%;
+    width: 95%;
     margin: 0.5rem; }
 
   .post-container {
@@ -8618,10 +8618,9 @@ figcaption {
 #index-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
-
-#down-arrow {
-  align-self: flex-end; }
+  align-items: center;
+  justify-content: center;
+  padding: auto; }
 
 table tr {
   border-top: 1px solid black;
