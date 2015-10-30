@@ -1,8 +1,7 @@
 {% assign chapter_titles = site.categories | sort %}
 
-<h2 class="brand-logo">RUCS</h2>
 <div class="height-fix">
-  <div class="marginless-row cyan darken-2">
+  <div class="marginless-row">
     <div class="marginless-col col m4 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
@@ -13,7 +12,6 @@
         {% if forloop.first == true %}
 
         <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="chapter-active waves-effect waves-light collection-item">
-          <span class="toc-enum">Chapter {{ i }}</span></br>
           <span class="toc-title">{{ chapter[0] | capitalize }}</span>
         </a>
 
@@ -22,7 +20,6 @@
         {% else %}
 
         <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-effect waves-light collection-item">
-          <span class="toc-enum">Chapter {{ i }}</span></br>
           <span class="toc-title">{{ chapter[0] | capitalize }}</span>
         </a>
 
@@ -131,28 +128,6 @@
             {% endfor %}
           </div>
         {% endfor %}
-        <!--
-          {% for chapter in site.categories %}
-            <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
-              {% for abstracts in chapter %}
-                {% if forloop.first == false %}
-                  {% for abstract in abstracts %}
-                      <div class="col s12 m6">
-                        <a href='{{ site.baseurl }}{{ abstract.url }}' class="white-text">
-                          <div class="marginless-card-panel cyan darken-2">
-                            <span class="white-text">{{ abstract.title }}</span><br/>
-                            <span class="white-text">{{ abstract.author }}</span><br/>
-                            <p class="white-text">{{ abstract.content | strip_html | truncatewords: 20 }}
-                            </p>
-                          </div>
-                        </a>
-                      </div>
-                  {% endfor %}
-                {% endif %}
-              {% endfor %}
-            </div>
-          {% endfor %}
-        -->
       </div>
     </div>
   </div>

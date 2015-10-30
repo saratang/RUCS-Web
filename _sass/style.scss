@@ -44,7 +44,7 @@
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url("../resources/backgroundweb.svg");
-$toc-height: 512px;
+$toc-height: 542px;
 
 html * {
 	font-family: $post-font;
@@ -73,10 +73,12 @@ figcaption {
 	border-bottom: 0;
 	border-right: 4px solid white;
 	margin-right: 2px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .chapter-active {
-	border-right: 4px solid $primary-color-dark !important;
+	border-left: 4px solid $primary-color-dark !important;
 }
 
 .background {
@@ -111,7 +113,7 @@ figcaption {
 
 @media #{$large-and-up} {
     // styles for large screens and up
-    .marginless-card-panel-container {
+    .card {
 	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
 	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
 	    // box-shadow:inset 0px 0px 0px 4px white;
@@ -119,20 +121,30 @@ figcaption {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		border: solid 4px $primary-color;
-		width: 50%;
-		height: 50%;
+		width: 45%;
+		height: 45%;
 		overflow: scroll;
+		margin: 0.5rem !important;
+	}
+
+	.post-container {
+		width: 50%;
 	}
 }
 
 @media#{$medium-and-down} {
 	// styles for medium screens and down
-	.marginless-card-panel-container {
+	.card {
 	    box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		border: solid 4px $primary-color;
 		width: 100%;
+		margin: 0.5rem;
+	}
+
+	.post-container {
+		width: 70%;
 	}
 }
 
@@ -154,17 +166,13 @@ figcaption {
 	  	font-size: 1.64rem; }
 
 	h4 {
-		font-size: 1rem; }
+		font-size: 1.4rem; }
 
 	h5 {
-		font-size: 0.6rem; }
+		font-size: 1rem; }
 
 	h6 {
-		font-size: 0.2rem; }
-
-	.post-container {
-		width: 50%;
-	}
+		font-size: 1rem; }
 
 	.review-title {
 	font-size: 10em;
@@ -192,8 +200,8 @@ figcaption {
 
 	h1 { font-size: 2.28rem; }
 	h2 { font-size: 1.64rem; }
-	h3 { font-size: 1rem; }
-	h4 { font-size: 1rem; }
+	h3 { font-size: 1.5rem; }
+	h4 { font-size: 1.4rem; }
 	h5 { font-size: 1rem; }
 	h6 { font-size: 1rem; }
 
@@ -205,8 +213,6 @@ figcaption {
 	font-size: 8em;
 	font-family: $web-title;
 	}
-
-
 }
 
 .marginless-card-panel-container:hover{
@@ -216,29 +222,29 @@ figcaption {
     box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	border: solid 4px white;
+	// border: solid 4px white;
 }
 
 .marginless-card-panel {
 	padding: 20px;
 	background-color: $primary-color;
 	border-radius: 0;
-	.title {
+}
+
+.card-content {
+	.card-title {
 		font-weight: bold;
 		font-size: 1.5em;
 		color: white;
-		line-height: 2rem;
+		line-height: 1.5rem !important;
 	}
-	.author {
+	.card-author {
 		color: white;
 	}
 	.preview {
 		color: white;
 	}
-}
-
-.card-panel-unhover {
-	background-color: $primary-color-dark;
+	height: 100%;
 }
 
 .marginless-card {
@@ -298,6 +304,7 @@ figcaption {
 .toc-title{
 	color: $primary-color-dark;
 	text-transform: capitalize;
+	font-weight: bold;
 }
 
 .toc-enum {
@@ -347,4 +354,14 @@ figcaption {
 
 .full-width {
 	min-width: 100%;
+}
+
+#index-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#down-arrow {
+	align-self: flex-end;
 }

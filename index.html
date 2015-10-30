@@ -7,14 +7,14 @@ layout: no_header
   {% include header.html %}
   
   <div class="section no-pad-box" id="index-banner">
-    <div class="container">
+    <div class="container" id="index-container">
       <br><br><br><br><br><br><br>
       <h1 class="review-title center white-text" id="site-title">RUCS</h1>
       <div class="row center">
         <h4 class="review-subtitle white-text">Review of Undergraduate</br> Computer Science</h4>
       </div>
-      <div class="row center">
-        <a class="waves-effect waves-light btn-large" id="enter-button">Enter</a>
+      <div class="row center down-arrow">
+        <i class="material-icons white-text">keyboard_arrow_down</i>
       </div>
     </div>
   </div>
@@ -28,24 +28,11 @@ layout: no_header
   </div>
 </div>
 
-<div class="parallax-container" style="height: 200px;">
-  <div class="parallax"><img src='{{ site.baseurl }}/resources/backgroundweb.svg'></div>
-</div>
-
 <a name="foreword"></a>
+<div class="grey lighten-2">
 <div class="full-height container valign-wrapper">
   <div class="section valign">
     {% include foreword.html %}
   </div>
-</div> 
-
-<div class="parallax-container" style="height: 200px;">
-  <div class="parallax"><img src='{{ site.baseurl }}/resources/backgroundweb.svg'></div>
 </div>
-
-<a name="acknowledgements"></a>
-<div class="full-height container valign-wrapper">
-  <div class="section valign">
-    {% include acknowledgements.html %}
-  </div>
-</div> 
+</div>

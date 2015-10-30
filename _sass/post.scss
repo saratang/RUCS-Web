@@ -1,0 +1,40 @@
+@import 'style';
+
+
+table {
+	tr {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		td {
+			text-align: center;
+		}
+	}
+}
+
+ul {
+	li {
+		list-style-type: disc !important;
+	}
+	padding-left: 40px !important;
+}
+
+.references {
+	p {
+		text-indent: -14px;
+		padding-left: 14px;
+		font-size: 0.9rem !important;
+	}
+}
+
+.appendix {
+	font-size: 0.9rem !important;
+}
+
+blockquote {
+	border-left: 0;
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+}

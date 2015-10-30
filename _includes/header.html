@@ -1,11 +1,11 @@
-{% if page.url == "/index.html" %}
-<nav class="transparent" role="navigation">
-  {% else %}
+{% if page.url != "/index.html" %}
+
 <nav class="cyan darken-2" role="navigation">
-  {% endif %}
   <div class="nav-wrapper container"><a id="logo-container" href="{{ site.baseurl }}/" class="brand-logo">{{site.title}}</a>
   </div>
 </nav>
+{% endif %}
+
 
 <!--
 <header class="site-header">
