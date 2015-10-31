@@ -88,7 +88,9 @@
     <div class="marginless-col col s12 m8 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
       <div class="toc-content height-fix" id="toc-content">
         <div class="toc-chapter-content" id="letter-from-the-editor">
-          {% include foreword.html %}
+          <div id="foreword">
+            {% include foreword.html %}
+          </div>
         </div>
         {% for chapter in site.categories %}
           <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">

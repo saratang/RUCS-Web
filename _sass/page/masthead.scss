@@ -1,11 +1,14 @@
 @import '../style';
 
 table {
-	border-spacing: 10px;
+
 	tr {
+		border: 0px !important;
+
 		td {
 			text-align: left !important;
 			width: 50%;
+			padding: 15px 10px 15px 10px;
 		}
 
 		td:first-child {
@@ -14,6 +17,13 @@ table {
 			vertical-align: top;
 		}
 	}
+}
+
+h1 {
+	margin-top: auto !important;
+}
+.masthead-title {
+	margin-bottom: 0em;
 }
 
 .valign, .valign-wrapper {
