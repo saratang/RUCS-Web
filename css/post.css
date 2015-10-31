@@ -8668,9 +8668,9 @@ ul {
 blockquote {
   border-left: 0; }
 
-img {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
+figure {
+  text-align: center; }
+  figure figcaption {
+    text-align: left; }
 
 /*# sourceMappingURL=post.css.map */
