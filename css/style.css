@@ -8642,7 +8642,7 @@ figcaption {
 
 .review-subtitle-container {
   position: absolute;
-  bottom: 25%;
+  top: 55%;
   width: inherit;
   margin: auto; }
 

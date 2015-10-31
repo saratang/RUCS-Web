@@ -8633,8 +8633,18 @@ figcaption {
   border: 0 !important;
   padding: 0px 10px; }
 
-#enter-button {
-  background-color: rgba(0, 150, 150, 0.2) !important; }
+.transparent-section {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.review-subtitle-container {
+  position: absolute;
+  top: 55%;
+  width: inherit;
+  margin: auto; }
 
 table tr {
   border-top: 1px solid black;
@@ -8659,6 +8669,7 @@ blockquote {
   border-left: 0; }
 
 img {
+  width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
