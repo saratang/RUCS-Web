@@ -1,0 +1,21 @@
+@import '../style';
+
+table {
+	border-spacing: 10px;
+	tr {
+		td {
+			text-align: left !important;
+			width: 50%;
+		}
+
+		td:first-child {
+			font-weight: bold;
+			text-align: right !important;
+			vertical-align: top;
+		}
+	}
+}
+
+.valign, .valign-wrapper {
+	width: 100%;
+}
