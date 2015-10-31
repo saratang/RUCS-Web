@@ -295,13 +295,13 @@ figcaption {
 
 .post-author {
 	@extend .post-title;
-	font-size: 18pt;
-	margin: 63px 0 0 0 !important;
+	font-size: 1.188em !important;
+	margin: 40px 0 0 0;
 }
 
 .post-supervisors {
 	@extend .post-title;
-	font-size: 16pt;
+	font-size: 1em !important;
 	font-style: italic;
 	margin: 10px 0 0 0 !important;
 }
@@ -342,7 +342,7 @@ figcaption {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-content: stretch;
+	align-content: center;
 }
 
 // .height-fix, #toc-content, #toc-content-wrapper {
