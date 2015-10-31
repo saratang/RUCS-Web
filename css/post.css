@@ -8403,6 +8403,10 @@ figcaption {
   background-size: cover;
   width: 100%; }
 
+.header-background {
+  background: url("../resources/backgroundweb.svg");
+  background-position: center; }
+
 .height-90 {
   height: 90vh; }
 
@@ -8426,25 +8430,28 @@ figcaption {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: solid 4px #0097a7;
+    border: 0;
     width: 45%;
     height: 45%;
     overflow: scroll;
-    margin: 0.5rem !important; }
+    margin: 0.5rem !important;
+    background-color: #0097a7; }
 
   .post-container {
-    width: 50%; } }
+    width: 50%;
+    padding: 20px; } }
 @media only screen and (max-width: 992px) {
   .card {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border: solid 4px #0097a7;
-    width: 95%;
-    margin: 0.5rem; }
+    border: 0;
+    width: 100%;
+    background-color: #0097a7; }
 
   .post-container {
-    width: 70%; } }
+    width: 70%;
+    padding: 20px; } }
 @media only screen and (min-width: 601px) {
   .height-fix, #toc-content, #toc-content-wrapper {
     max-height: 542px !important;
@@ -8513,11 +8520,6 @@ figcaption {
   .review-title {
     font-size: 8em;
     font-family: "Code Pro Demo"; } }
-.marginless-card-panel-container:hover {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box; }
-
 .marginless-card-panel {
   padding: 20px;
   background-color: #0097a7;
@@ -8556,7 +8558,7 @@ figcaption {
   padding: 0 !important; }
 
 .post-header {
-  margin: 10em 0 0 0;
+  margin: 5rem 0 0 0;
   text-align: center; }
 
 .post-title, .post-meta {
@@ -8603,24 +8605,36 @@ figcaption {
 .toc-chapter-content {
   position: relative; }
 
-.bottom {
-  position: absolute; }
-
-.acknowledgements, .references {
-  font-size: 0.8rem; }
-
 .page-footer {
   background: url("../resources/backgroundweb.svg"); }
 
 .full-width {
   min-width: 100%; }
 
-#index-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: auto; }
+#title-info {
+  margin: 0 auto; }
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  margin: 0 auto 100px auto; }
+
+.page-footer {
+  margin: 0px !important;
+  min-height: 100px;
+  padding: 30px 0 30px 0 !important; }
+
+.collapsible-header {
+  border-bottom: 0 !important;
+  border-top: 1px solid #ddd; }
+
+.collapsible-body {
+  border: 0 !important;
+  padding: 0px 10px; }
+
+#enter-button {
+  background-color: rgba(0, 150, 150, 0.2) !important; }
 
 table tr {
   border-top: 1px solid black;
@@ -8634,11 +8648,11 @@ ul {
     list-style-type: disc !important; }
 
 .references p {
-  text-indent: -14px;
-  padding-left: 14px;
+  text-indent: -18px;
+  padding-left: 18px;
   font-size: 0.9rem !important; }
 
-.appendix {
+.appendix, .acknowledgements {
   font-size: 0.9rem !important; }
 
 blockquote {

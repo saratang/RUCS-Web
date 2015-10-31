@@ -21,13 +21,19 @@
 		e.preventDefault();
 	});
 
-	// $(".marginless-card-panel").hover(
-	// 	function() {
-	// 		$(this).addClass('z-depth-3');
-	// 	}, function() {
-	// 		$(this).removeClass('z-depth-3');
-	// 	}
-	// );
+	$(".card").hover(
+		function() {
+			$(this).addClass('z-depth-2');
+			$(this).animate({
+				backgroundColor: "#00838f"
+			}, 250);
+		}, function() {
+			$(this).removeClass('z-depth-2');
+			$(this).animate({
+				backgroundColor: "#0097a7"
+			}, 250);
+		}
+	);
 
 
 	// 	var options = [

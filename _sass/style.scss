@@ -88,6 +88,11 @@ figcaption {
 	width: 100%;
 }
 
+.header-background {
+	background: $background;
+	background-position: center;
+}
+
 .height-90 {
 	height: 90vh;
 }
@@ -120,15 +125,17 @@ figcaption {
 	    box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		border: solid 4px $primary-color;
+		border: 0;
 		width: 45%;
 		height: 45%;
 		overflow: scroll;
 		margin: 0.5rem !important;
+		background-color: $primary-color;
 	}
 
 	.post-container {
 		width: 50%;
+		padding: 20px;
 	}
 }
 
@@ -138,13 +145,14 @@ figcaption {
 	    box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		border: solid 4px $primary-color;
-		width: 95%;
-		margin: 0.5rem;
+		border: 0;
+		width: 100%;
+		background-color: $primary-color;
 	}
 
 	.post-container {
 		width: 70%;
+		padding: 20px;
 	}
 }
 
@@ -215,16 +223,6 @@ figcaption {
 	}
 }
 
-.marginless-card-panel-container:hover{
-    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
-    // -moz-box-shadow:inset 0px 0px 0px 4px white;
-    // box-shadow:inset 0px 0px 0px 4px white;
-    box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	// border: solid 4px white;
-}
-
 .marginless-card-panel {
 	padding: 20px;
 	background-color: $primary-color;
@@ -273,7 +271,7 @@ figcaption {
 }
 
 .post-header {
-	margin: 10em 0 0 0;
+	margin: 5rem 0 0 0;
 	text-align: center;
 }
 
@@ -340,14 +338,6 @@ figcaption {
 	position: relative;
 }
 
-.bottom {
-	position: absolute;
-}
-
-.acknowledgements, .references {
-	font-size: 0.8rem;
-}
-
 .page-footer {
 	background: $background;
 }
@@ -356,10 +346,39 @@ figcaption {
 	min-width: 100%;
 }
 
-#index-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: auto;
+
+#title-info {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: space-around;
+// 	padding: auto;
+    margin: 0 auto;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+	width: inherit;
+	margin: 0 auto 100px auto;
+}
+
+.page-footer {
+	margin: 0px !important;
+	min-height: 100px;
+	padding: 30px 0 30px 0 !important;
+}
+
+.collapsible-header {
+	border-bottom: 0 !important;
+	border-top: 1px solid #ddd;
+}
+
+.collapsible-body {
+	border: 0 !important;
+	padding: 0px 10px;
+}
+
+#enter-button {
+	background-color: rgba(0, 150, 150, 0.2) !important;
 }
