@@ -8454,9 +8454,9 @@ figcaption {
     padding: 20px; } }
 @media only screen and (min-width: 601px) {
   .height-fix, #toc-content, #toc-content-wrapper {
-    max-height: 542px !important;
-    height: 542px;
-    overflow: hidden !important; }
+    max-height: 646px !important;
+    height: 646px;
+    overflow: scroll !important; }
 
   h1, .post-title, .post-meta {
     font-size: 2.92rem; }
@@ -8478,7 +8478,10 @@ figcaption {
 
   .review-title {
     font-size: 10em;
-    font-family: "Code Pro Demo"; } }
+    font-family: "Code Pro Demo"; }
+
+  .masthead-link p {
+    text-align: right; } }
 @media only screen and (max-width: 600px) {
   .collapsible-toc {
     height: 100%;
@@ -8544,7 +8547,7 @@ figcaption {
 .marginless-collection {
   margin: 0 !important;
   border: 0;
-  height: 542px;
+  height: 646px;
   background-color: white;
   border-radius: 0;
   overflow: scroll !important; }

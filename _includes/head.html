@@ -14,7 +14,7 @@
 
   <!-- For rendering custom CSS for individual pages -->
   {% if page && (page.css != "") %}
-  <link href="{{ site.baseurl }}/css/abstracts/{{ page.css }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="{{ site.baseurl }}/css/page/{{ page.css }}" type="text/css" rel="stylesheet" media="screen,projection" />
   {% endif %}
   
   {% if page.layout == "default" %}

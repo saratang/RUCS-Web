@@ -2,7 +2,7 @@
 
 $(".parallax").parallax();
 $(".toc-content").children().hide();
-$("#artificial-intelligence").show();
+$("#letter-from-the-editor").show();
 
 $(function(){
 

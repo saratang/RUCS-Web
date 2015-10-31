@@ -44,7 +44,7 @@
 $web-title: "Code Pro Demo";
 $post-font: "CMU Serif";
 $background: url("../resources/backgroundweb.svg");
-$toc-height: 542px;
+$toc-height: 646px;
 
 html * {
 	font-family: $post-font;
@@ -160,7 +160,7 @@ figcaption {
 	.height-fix, #toc-content, #toc-content-wrapper {
 	max-height: $toc-height !important;
 	height: $toc-height;
-	overflow: hidden !important;
+	overflow: scroll !important;
 	}
 
 	h1 {
@@ -185,6 +185,12 @@ figcaption {
 	.review-title {
 	font-size: 10em;
 	font-family: $web-title;
+	}
+
+	.masthead-link {
+		p {
+		text-align: right;
+		}
 	}
 }
 
