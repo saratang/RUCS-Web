@@ -8447,6 +8447,7 @@ figcaption {
     -webkit-box-sizing: border-box;
     border: 0;
     width: 100%;
+    max-height: 50%;
     background-color: #0097a7; }
 
   .post-container {
@@ -8613,7 +8614,7 @@ figcaption {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center; }
+  align-content: flex-start; }
 
 .parallax-container {
   height: 200px !important; }
