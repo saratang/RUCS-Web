@@ -5,9 +5,10 @@ table {
 	tr {
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
-		td {
-			text-align: center;
-		}
+	}
+
+	td, th {
+		text-align: center;
 	}
 	margin-bottom: 8px !important;
 }

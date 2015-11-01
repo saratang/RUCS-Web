@@ -8447,6 +8447,7 @@ figcaption {
     -webkit-box-sizing: border-box;
     border: 0;
     width: 100%;
+    max-height: 50%;
     background-color: #0097a7; }
 
   .post-container {
@@ -8575,11 +8576,11 @@ figcaption {
   font-size: 3.56rem; }
 
 .post-author {
-  font-size: 18pt;
-  margin: 63px 0 0 0 !important; }
+  font-size: 1.188em !important;
+  margin: 40px 0 0 0; }
 
 .post-supervisors {
-  font-size: 16pt;
+  font-size: 1em !important;
   font-style: italic;
   margin: 10px 0 0 0 !important; }
 
@@ -8613,7 +8614,7 @@ figcaption {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: stretch; }
+  align-content: flex-start; }
 
 .parallax-container {
   height: 200px !important; }
@@ -8688,8 +8689,8 @@ table {
   table tr {
     border-top: 1px solid black;
     border-bottom: 1px solid black; }
-    table tr td {
-      text-align: center; }
+  table td, table th {
+    text-align: center; }
 
 ul {
   padding-left: 40px !important; }
