@@ -8702,7 +8702,8 @@ h1, .post-title, .post-author, .post-supervisors {
   margin-top: auto !important; }
 
 .masthead-title {
-  margin-bottom: 0em; }
+  margin-bottom: 0em;
+  margin-top: 1em !important; }
 
 .valign, .valign-wrapper {
   width: 100%; }
