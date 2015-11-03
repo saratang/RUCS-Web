@@ -1,23 +1,89 @@
 @import 'style';
 
+.post-container {
+	.post-content {
+		font-family: $post-font;
+		font-size: 1.1em;
+		margin-bottom: 40px;
 
-table {
-	tr {
-		border-top: 1px solid black;
-		border-bottom: 1px solid black;
-	}
+		h1 {
+			font-family: $post-title-font !important;
+			font-size: 2.5em !important;
+			font-weight: 300 !important;
+			margin-top: 4.5rem !important;
+			}
 
-	td, th {
-		text-align: center;
+		h2 {
+			font-family: $post-title-font !important;
+			font-size: 2.28rem;
+			font-weight: 300;
+		}
+
+		h3 {
+			font-family: $post-title-font !important;
+		  	font-size: 1.625em;
+		  	font-weight: 300;
+		  	margin-top: 3rem !important; }
+
+		h4 {
+			font-family: $post-title-font !important;
+			font-size: 1.4rem;
+			font-weight: 300;
+			margin-top: 4.5rem !important; }
+
+		h5 {
+			font-family: $post-title-font !important;
+			font-size: 1rem;
+			font-weight: 300; }
+
+		h6 {
+			font-family: $post-title-font !important;
+			font-size: 1rem;
+			font-weight: 300; }
+		table {
+			tr {
+				border-top: 1px solid black;
+				border-bottom: 1px solid black;
+			}
+
+			td, th {
+				text-align: center;
+			}
+			margin-bottom: 8px !important;
+		}
+
+		ul {
+			li {
+				list-style-type: disc !important;
+			}
+			padding-left: 40px !important;
+		}
 	}
-	margin-bottom: 8px !important;
 }
 
-ul {
-	li {
-		list-style-type: disc !important;
+.post-header {
+	margin: 5rem 0 0 0;
+	text-align: center;
+
+	.post-title {
+		font-family: $post-title-font;
+		font-weight: 300;
+		font-size: 3.56rem;
+		text-align: center;
 	}
-	padding-left: 40px !important;
+
+	.post-author {
+		text-align: center;
+		font-size: 1.188em !important;
+		margin: 40px 0 0 0;
+	}
+
+	.post-supervisors {
+		text-align: center;
+		font-size: 1em !important;
+		font-style: italic;
+		margin: 10px 0 0 0 !important;
+	}
 }
 
 .references p {

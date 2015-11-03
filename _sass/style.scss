@@ -42,6 +42,7 @@
 }
 
 $web-title: "Code Pro Demo";
+$post-title-font: "Calibri";
 $post-font: "CMU Serif";
 $background: url("../resources/backgroundweb.svg");
 $toc-height: 646px;
@@ -164,10 +165,8 @@ figcaption {
 	overflow: scroll !important;
 	}
 
-	h1 {
-		font-size: 2.92rem;
-		margin-top: 4.5rem !important;
-		}
+	h1 {font-size: 2.92rem;
+		margin-top: 4.5rem !important;}
 
 	h2 {
 		font-size: 2.28rem;
@@ -192,8 +191,9 @@ figcaption {
 	}
 
 	.masthead-link {
+		align-self: flex-start;
 		p {
-		text-align: right;
+		text-align: left;
 		}
 	}
 }
@@ -244,7 +244,8 @@ figcaption {
 
 .card-content {
 	.card-title {
-		font-weight: bold;
+		font-family: $post-title-font;
+		font-weight: 500;
 		font-size: 1.5em;
 		color: white;
 		line-height: 1.5rem !important;
@@ -281,36 +282,6 @@ figcaption {
 	@extend .row;
 	margin: 0 !important;
 	padding: 0 !important;
-}
-
-.post-header {
-	margin: 5rem 0 0 0;
-	text-align: center;
-}
-
-.post-title {
-	@extend h1;
-	font-family: $post-font;
-	font-size: 3.56rem;
-}
-
-.post-author {
-	@extend .post-title;
-	font-size: 1.188em !important;
-	margin: 40px 0 0 0;
-}
-
-.post-supervisors {
-	@extend .post-title;
-	font-size: 1em !important;
-	font-style: italic;
-	margin: 10px 0 0 0 !important;
-}
-
-.post-content {
-	font-family: $post-font;
-	font-size: 1.1em;
-	margin-bottom: 40px;
 }
 
 .no-shadow {
@@ -360,10 +331,6 @@ figcaption {
 	position: relative;
 }
 
-.page-footer {
-	background: $background;
-}
-
 .full-width {
 	min-width: 100%;
 }
@@ -388,6 +355,7 @@ figcaption {
 }
 
 .page-footer {
+	background: $background;
 	margin: 0px !important;
 	min-height: 100px;
 	padding: 30px 0 30px 0 !important;
@@ -440,4 +408,32 @@ figcaption {
 
 .cyan-hover:hover {
 	text-shadow: 0 0 10px $primary-color;
+}
+
+.footer-row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.navbar-fixed {
+	.header-background {
+		.nav-wrapper {
+			ul {
+				height: 100%;
+				li {
+					@extend .valign-wrapper;
+					height: 100%;
+					a {
+						@extend .valign;
+					}
+				}
+			}
+
+			.brand-logo {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
 }

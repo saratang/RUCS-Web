@@ -96,41 +96,11 @@
           <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
             {% for abstracts in chapter %}
               {% if forloop.first == false %}
-                {% if abstracts.size == 1 %}
-                  {% for abstract in abstracts %}
+                {% for abstract in abstracts %}
 
-                      {% include marginless_card_panel.html %}
+                    {% include marginless_card_panel.html %}
 
-                  {% endfor %}               
-                {% elsif abstracts.size == 2 %}
-                  {% for abstract in abstracts %}
-                        
-                        {% include marginless_card_panel.html %}
-
-
-                  {% endfor %}
-                {% elsif abstracts.size == 3 %}
-                  {% for abstract in abstracts %}
-                    
-                      {% include marginless_card_panel.html %}
-                        
-                  {% endfor %}
-                {% else %}
-                  {% assign modulo = {{ abstracts | size | modulo:2 }} %}
-                  {% if modulo == 0 %}
-                    {% for abstract in abstracts %}
-                        
-                        {% include marginless_card_panel.html %}
-
-                    {% endfor %}
-                  {% else %}
-                    {% for abstract in abstracts %}
-
-                        {% include marginless_card_panel.html %}
-
-                    {% endfor %}
-                  {% endif %}
-                {% endif %}
+                {% endfor %}
               {% endif %}
             {% endfor %}
           </div>
