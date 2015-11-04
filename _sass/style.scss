@@ -45,7 +45,8 @@ $web-title: "Code Pro Demo";
 $post-title-font: "Calibri";
 $post-font: "CMU Serif";
 $background: url("../resources/backgroundweb.svg");
-$toc-height: 646px;
+$toc-height: 570px;
+$toc-width: 896px;
 
 html * {
 	font-family: $post-font;
@@ -66,13 +67,9 @@ figcaption {
 	font-size: inherit;
 }
 
-.full-height {
-	min-height: 100vh;
-}
-
 .marginless-collection .collection-item {
 	border-bottom: 0;
-	border-right: 4px solid white;
+	border-left: 4px solid white;
 	margin-right: 2px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -82,24 +79,9 @@ figcaption {
 	border-left: 4px solid $primary-color-dark !important;
 }
 
-.background {
-	@extend .full-height;
-	background: $background;
-	background-size: cover;
-	width: 100%;
-}
-
 .header-background {
 	background: $background;
 	background-position: center;
-}
-
-.height-90 {
-	height: 90vh;
-}
-
-.height-100 {
-	height: 100%;
 }
 
 .review-subtitle {
@@ -108,61 +90,104 @@ figcaption {
 	line-height: 2em;
 }
 
-.footer-bg-image {
-	background: $background;
-	background-size: cover;
-}
-
 .padless {
 	padding: 0 !important;
 }
 
+.page-footer {
+	background: $background;
+	margin: 0px !important;
+	min-height: 100px;
+	padding: 30px 0 30px 0 !important;
+}
+
 @media #{$large-and-up} {
     // styles for large screens and up
-    .card {
-	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
-	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
-	    // box-shadow:inset 0px 0px 0px 4px white;
-	    box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		border: 0;
-		width: 45%;
-		height: 45%;
-		overflow: scroll;
-		margin: 0.5rem !important;
-		background-color: $primary-color;
+    .toc-container {
+    	display: flex;
+    	align-items: stretch;
+	    #toc-content-wrapper {
+	    	display: flex;
+	    	align-items: stretch;
+
+	    	.toc-content {
+	    		display: flex;
+	    		align-items: stretch;
+	    		.toc-chapter-content {
+	    			height: inherit;
+	    		}
+	    	}
+	    }
+    }
+
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+		width: 100vw;
+	}    
+
+	.marginless-row {
+		width: 1200px;
 	}
 
 	.post-container {
 		width: 50%;
 		padding: 20px;
 	}
+
+	.full-height {
+		height: 100vh;
+	}
+
+	.full-width {
+		width: 100%;
+	}
 }
 
-@media#{$medium-and-down} {
+@media#{$medium-only} {
 	// styles for medium screens and down
-	.card {
-	    box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		border: 0;
-		width: 100%;
-		max-height: 50%;
-		background-color: $primary-color;
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+		width: 1200px;
+
+		.container {
+			.review-title-container, .review-subtitle-container, .bottom {
+				width: 1020px;
+			}
+		}
 	}
 
 	.post-container {
 		width: 70%;
 		padding: 20px;
 	}
+
+	.full-width {
+		width: $large-screen;
+	}
+
+	.fixed-height {
+		height: $toc-height;
+		width: $toc-width;
+	}
 }
 
 @media#{$medium-and-up} {
-	.height-fix, #toc-content, #toc-content-wrapper {
-	max-height: $toc-height !important;
-	height: $toc-height;
-	overflow: scroll !important;
+
+	// .height-fix, #toc-content, #toc-content-wrapper {
+	// max-height: $toc-height !important;
+	// height: $toc-height;
+	// }
+
+	.col.m30, .col.l30 {
+		width: 30%;
+	}
+
+	.col.m70, .col.m70 {
+		width: 70%;
 	}
 
 	h1 {font-size: 2.92rem;
@@ -186,19 +211,40 @@ figcaption {
 		font-size: 1rem; }
 
 	.review-title {
-	font-size: 10em;
-	font-family: $web-title;
+		font-size: 10em;
+		font-family: $web-title;
 	}
 
-	.masthead-link {
+	#masthead-link {
+		padding-left: 5%;
 		align-self: flex-start;
 		p {
 		text-align: left;
 		}
 	}
+
+	.card {
+	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+	    // box-shadow:inset 0px 0px 0px 4px white;
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: 0;
+		width: 45%;
+		height: 250px;
+		margin: 0.5rem !important;
+		background-color: $primary-color;
+	}
 }
 
 @media#{$small-and-down} {
+	.background {
+		height: 100vh;
+		background: $background;
+		background-size: cover;
+	}
+
 	.collapsible-toc {
 		height: 100%;
 		min-width: 100%;
@@ -234,6 +280,24 @@ figcaption {
 	font-size: 8em;
 	font-family: $web-title;
 	}
+
+	.full-width {
+		width: 100%;
+	}
+
+	.card {
+	    // -webkit-box-shadow:inset 0px 0px 0px 4px white;
+	    // -moz-box-shadow:inset 0px 0px 0px 4px white;
+	    // box-shadow:inset 0px 0px 0px 4px white;
+	    box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: 0;
+		width: inherit;
+		min-height: 200px;
+		margin: 0.5rem !important;
+		background-color: $primary-color;
+	}
 }
 
 .marginless-card-panel {
@@ -267,21 +331,9 @@ figcaption {
 .marginless-collection {
 	margin: 0 !important;
 	border: 0;
-	height: $toc-height;
+	// height: $toc-height;
 	background-color: white;
 	border-radius: 0;
-	overflow: scroll !important;
-}
-
-.marginless-col {
-	margin: 0 !important;
-	padding: 0 !important;
-}
-
-.marginless-row {
-	@extend .row;
-	margin: 0 !important;
-	padding: 0 !important;
 }
 
 .no-shadow {
@@ -301,11 +353,6 @@ figcaption {
 .toc-enum {
 	color: $primary-color-dark;
 	font-weight: 300;
-}
-
-.toc-content {
-	height: 100%;
-	width: 100%;
 }
 
 .toc-chapter-content {
@@ -331,34 +378,23 @@ figcaption {
 	position: relative;
 }
 
-.full-width {
-	min-width: 100%;
-}
 
-
-#title-info {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	justify-content: space-around;
-// 	padding: auto;
-	position: relative;
-	bottom: 5%;
-    margin: 0 auto;
-}
+// #title-info {
+// // 	display: flex;
+// // 	flex-direction: column;
+// // 	align-items: center;
+// // 	justify-content: space-around;
+// // 	padding: auto;
+// 	position: relative;
+// 	bottom: 5%;
+//     margin: 0 auto;
+// }
 
 .bottom {
 	position: absolute;
 	bottom: 0;
 	width: inherit;
 	margin: 0 auto 5% auto;
-}
-
-.page-footer {
-	background: $background;
-	margin: 0px !important;
-	min-height: 100px;
-	padding: 30px 0 30px 0 !important;
 }
 
 .collapsible-header {
@@ -377,6 +413,13 @@ figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.review-title-container {
+	position: absolute;
+	bottom: 40%;
+	width: inherit;
+	margin: auto;
 }
 
 .review-subtitle-container {
@@ -436,4 +479,8 @@ figcaption {
 			}
 		}
 	}
+}
+
+#issue-title {
+	margin-left: 10%;
 }

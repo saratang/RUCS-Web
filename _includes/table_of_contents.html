@@ -1,8 +1,8 @@
 {% assign chapter_titles = site.categories | sort %}
 
 <div class="height-fix">
-  <div class="marginless-row">
-    <div class="marginless-col col m4 l3 hide-on-small-and-down">
+  <div class="row toc-container">
+    <div class="col m3 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
         <a href="#letter-from-the-editor" class="chapter-active waves-effect waves-light collection-item">
@@ -34,7 +34,30 @@
       </div>
     </div>
 
-    <div class="marginless-col col s12 hide-on-med-and-up show-on-small">
+    <div class="col s12 m9 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
+      <div class="toc-content height-fix" id="toc-content">
+        <div class="toc-chapter-content" id="letter-from-the-editor">
+          <div id="foreword">
+            {% include foreword.html %}
+          </div>
+        </div>
+        {% for chapter in site.categories %}
+          <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
+            {% for abstracts in chapter %}
+              {% if forloop.first == false %}
+                {% for abstract in abstracts %}
+
+                    {% include marginless_card_panel.html %}
+
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
         <li>
           <div class="collapsible-header toc-title">Letter From the Editor</div>
@@ -83,29 +106,6 @@
               </div>
             </li>
       </ul>
-    </div>
-
-    <div class="marginless-col col s12 m8 l9 height-fix hide-on-small-and-down" id="toc-content-wrapper">
-      <div class="toc-content height-fix" id="toc-content">
-        <div class="toc-chapter-content" id="letter-from-the-editor">
-          <div id="foreword">
-            {% include foreword.html %}
-          </div>
-        </div>
-        {% for chapter in site.categories %}
-          <div class="toc-chapter-content" id="{{ chapter[0] | replace: ' ', '-' }}">
-            {% for abstracts in chapter %}
-              {% if forloop.first == false %}
-                {% for abstract in abstracts %}
-
-                    {% include marginless_card_panel.html %}
-
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endfor %}
-      </div>
     </div>
   </div>
 </div>
