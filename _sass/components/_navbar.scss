@@ -49,6 +49,7 @@ nav {
 
     &.center {
       left: 50%;
+      top: 0%;
       @include transform(translateX(-50%));
     }
 
