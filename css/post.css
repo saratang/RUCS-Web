@@ -8423,7 +8423,8 @@ figcaption {
       align-items: stretch; }
       .toc-container #toc-content-wrapper .toc-content {
         display: flex;
-        align-items: stretch; }
+        align-items: stretch;
+        width: 100%; }
         .toc-container #toc-content-wrapper .toc-content .toc-chapter-content {
           height: inherit; }
 
@@ -8465,11 +8466,9 @@ figcaption {
     height: 570px;
     width: 896px; } }
 @media only screen and (min-width: 601px) {
-  .col.m30, .col.l30 {
-    width: 30%; }
-
-  .col.m70, .col.m70 {
-    width: 70%; }
+  .toc-container {
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
   h1 {
     font-size: 2.92rem;
@@ -8702,33 +8701,62 @@ figcaption {
   font-family: "CMU Serif";
   font-size: 1.1em;
   margin-bottom: 40px; }
-  .post-container .post-content h1 {
-    font-family: "Calibri" !important;
-    font-size: 2.5em !important;
-    font-weight: 300 !important;
-    margin-top: 4.5rem !important; }
-  .post-container .post-content h2 {
-    font-family: "Calibri" !important;
-    font-size: 2.28rem;
-    font-weight: 300; }
-  .post-container .post-content h3 {
-    font-family: "Calibri" !important;
-    font-size: 1.625em;
-    font-weight: 300;
-    margin-top: 3rem !important; }
-  .post-container .post-content h4 {
-    font-family: "Calibri" !important;
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-top: 4.5rem !important; }
-  .post-container .post-content h5 {
-    font-family: "Calibri" !important;
-    font-size: 1rem;
-    font-weight: 300; }
-  .post-container .post-content h6 {
-    font-family: "Calibri" !important;
-    font-size: 1rem;
-    font-weight: 300; }
+  @media only screen and (max-width: 600px) {
+    .post-container .post-content h1 {
+      font-family: "Calibri" !important;
+      font-size: 2.5em !important;
+      font-weight: 300 !important;
+      margin-top: 4.5rem !important; }
+    .post-container .post-content h2 {
+      font-family: "Calibri" !important;
+      font-size: 2.28rem;
+      font-weight: 300; }
+    .post-container .post-content h3 {
+      font-family: "Calibri" !important;
+      font-size: 1.625em;
+      font-weight: 300;
+      margin-top: 3rem !important; }
+    .post-container .post-content h4 {
+      font-family: "Calibri" !important;
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-top: 4.5rem !important; }
+    .post-container .post-content h5 {
+      font-family: "Calibri" !important;
+      font-size: 1rem;
+      font-weight: 300; }
+    .post-container .post-content h6 {
+      font-family: "Calibri" !important;
+      font-size: 1rem;
+      font-weight: 300; } }
+  @media only screen and (min-width: 601px) {
+    .post-container .post-content h1 {
+      font-family: "Calibri" !important;
+      font-size: 2.5em !important;
+      font-weight: 300 !important;
+      margin-top: 4.5rem !important; }
+    .post-container .post-content h2 {
+      font-family: "Calibri" !important;
+      font-size: 2.28rem;
+      font-weight: 300; }
+    .post-container .post-content h3 {
+      font-family: "Calibri" !important;
+      font-size: 1.625em;
+      font-weight: 300;
+      margin-top: 3rem !important; }
+    .post-container .post-content h4 {
+      font-family: "Calibri" !important;
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-top: 4.5rem !important; }
+    .post-container .post-content h5 {
+      font-family: "Calibri" !important;
+      font-size: 1rem;
+      font-weight: 300; }
+    .post-container .post-content h6 {
+      font-family: "Calibri" !important;
+      font-size: 1rem;
+      font-weight: 300; } }
   .post-container .post-content table {
     margin-bottom: 8px !important; }
     .post-container .post-content table tr {
@@ -8744,21 +8772,38 @@ figcaption {
 .post-header {
   margin: 5rem 0 0 0;
   text-align: center; }
-  .post-header .post-title {
-    font-family: "Calibri";
-    font-weight: 300;
-    font-size: 3.56rem;
-    text-align: center;
-    line-height: 1.35; }
-  .post-header .post-author {
-    text-align: center;
-    font-size: 1.188em !important;
-    margin: 40px 0 0 0; }
-  .post-header .post-supervisors {
-    text-align: center;
-    font-size: 1em !important;
-    font-style: italic;
-    margin: 10px 0 0 0 !important; }
+  @media only screen and (min-width: 601px) {
+    .post-header .post-title {
+      font-family: "Calibri";
+      font-weight: 300;
+      font-size: 3.56rem;
+      text-align: center;
+      line-height: 1.35; }
+    .post-header .post-author {
+      text-align: center;
+      font-size: 1.188em !important;
+      margin: 40px 0 0 0; }
+    .post-header .post-supervisors {
+      text-align: center;
+      font-size: 1em !important;
+      font-style: italic;
+      margin: 10px 0 0 0 !important; } }
+  @media only screen and (max-width: 600px) {
+    .post-header .post-title {
+      font-family: "Calibri";
+      font-weight: 300;
+      font-size: 3rem;
+      text-align: center;
+      line-height: 1.35; }
+    .post-header .post-author {
+      text-align: center;
+      font-size: 1.188em !important;
+      margin: 40px 0 0 0; }
+    .post-header .post-supervisors {
+      text-align: center;
+      font-size: 1em !important;
+      font-style: italic;
+      margin: 10px 0 0 0 !important; } }
 
 .references p {
   text-indent: -18px;
