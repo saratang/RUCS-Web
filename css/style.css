@@ -2017,7 +2017,7 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
 
-.valign-wrapper, .navbar-fixed .header-background .nav-wrapper ul li {
+.valign-wrapper {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2027,7 +2027,7 @@ a {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
-  .valign-wrapper .valign, .navbar-fixed .header-background .nav-wrapper ul li .valign, .navbar-fixed .header-background .nav-wrapper ul li a {
+  .valign-wrapper .valign {
     display: block; }
 
 ul {
@@ -5346,7 +5346,10 @@ nav {
       right: 0.5rem;
       padding: 0; }
   nav ul {
-    margin: 0; }
+    margin-left: 1%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0; }
     nav ul li {
       -webkit-transition: background-color 0.3s;
       -moz-transition: background-color 0.3s;
@@ -8686,10 +8689,18 @@ figcaption {
   align-items: center;
   flex-wrap: wrap; }
 
-.navbar-fixed .header-background .nav-wrapper ul {
-  height: 100%; }
-  .navbar-fixed .header-background .nav-wrapper ul li {
-    height: 100%; }
+.navbar-fixed .header-background .nav-wrapper div {
+  height: 100%;
+  width: 5%;
+  text-align: center;
+  -webkit-transition: background 0.15s linear;
+  -moz-transition: background 0.15s linear;
+  -ms-transition: background 0.15s linear;
+  -o-transition: background 0.15s linear;
+  transition: background 0.15s linear;
+  transition-property: background-color; }
+.navbar-fixed .header-background .nav-wrapper div:hover {
+  background-color: #0097a7; }
 .navbar-fixed .header-background .nav-wrapper .brand-logo {
   left: 50%;
   top: 7%;
