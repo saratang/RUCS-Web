@@ -5774,7 +5774,7 @@ small {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #00dcf4;
+    background-color: #00dcf3;
     will-change: left, right; }
 
 .tabs .tab {
@@ -8394,7 +8394,7 @@ figcaption {
   padding-bottom: 20px; }
 
 .chapter-active {
-  border-left: 4px solid #00525b !important; }
+  border-left: 4px solid #00525a !important; }
 
 .header-background {
   background: url("../resources/backgroundweb.svg");
@@ -8467,8 +8467,8 @@ figcaption {
     width: 896px; } }
 @media only screen and (min-width: 601px) {
   .toc-container {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 5%;
+    margin-bottom: 5%; }
 
   h1 {
     font-size: 2.92rem;
@@ -8496,7 +8496,7 @@ figcaption {
     font-family: "Code Pro Demo"; }
 
   #masthead-link {
-    padding-left: 5%;
+    padding-left: 6%;
     align-self: flex-start; }
     #masthead-link p {
       text-align: left; }
@@ -8607,12 +8607,12 @@ figcaption {
   font-family: "Code Pro Demo"; }
 
 .toc-title {
-  color: #00525b;
+  color: #00525a;
   text-transform: capitalize;
   font-weight: bold; }
 
 .toc-enum {
-  color: #00525b;
+  color: #00525a;
   font-weight: 300; }
 
 .toc-chapter-content {
@@ -8692,9 +8692,10 @@ figcaption {
     height: 100%; }
 .navbar-fixed .header-background .nav-wrapper .brand-logo {
   left: 50%;
+  top: 7%;
   transform: translateX(-50%); }
 
 #issue-title {
-  margin-left: 10%; }
+  margin-left: 0.75rem; }
 
 /*# sourceMappingURL=style.css.map */
