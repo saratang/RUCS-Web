@@ -59,7 +59,7 @@
 
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
-        <li id="mini-letter-from-the-editor">
+        <li id="letter-from-the-editor-mini">
           <div class="collapsible-header toc-title">Letter From the Editor</div>
           <div class="collapsible-body">
             {% include foreword.html %}
@@ -70,7 +70,7 @@
           {% if chapter[0] == 'profiles and interviews' %}
               {% assign i = i | minus: 1 %}
           {% else %}
-            <li id="mini-{{ chapter[0] | replace: ' ', '-'}}">
+            <li id="{{ chapter[0] | replace: ' ', '-'}}-mini">
               <div class="collapsible-header toc-title">{{ chapter[0] | capitalize }}</div>
                 {% for abstracts in chapter %}
                   {% if forloop.first == false %}
@@ -85,7 +85,7 @@
           {% endif %}
           {% assign i = i | plus: i %}
         {% endfor %}
-            <li id="mini-profiles-and-interviews">
+            <li id="profiles-and-interviews-mini">
               <div class="collapsible-header toc-title">Profiles/Interviews</div>
               <div class="collapsible-body">
                 {% for chapter in chapter_titles %}
