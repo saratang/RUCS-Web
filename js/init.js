@@ -14,12 +14,13 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0)) {
 	console.log(pathArray[plast]);
 	console.log(pathArray.length);
 	window.location.href = "#table-of-contents";
+	$('link[type*=icon]').detach().appendTo('head');
 
 	if (pathArray[plast] == "#table-of-contents") {
 		pathArray[plast] = "#letter-from-the-editor";
 	} 
 
-	$(pathArray[3]).show();
+	$(pathArray[plast]).show();
 	$('a[href=' + pathArray[plast] + ']').addClass("chapter-active");
 	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
 	
