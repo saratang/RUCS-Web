@@ -23,8 +23,10 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
 	
 	if(pathArray[plast] != "#letter-from-the-editor") {
-		$("#mini-" + pathArray[plast]).addClass("active");
-		$("#mini-" + pathArray[plast]).children().first().addClass("active");
+		var mini_name = "#mini-" + pathArray[plast];
+		console.log(mini_name);
+		$(mini_name).addClass("active");
+		$(mini_name).children().first().addClass("active");
 	}
 } else {
 	$("#letter-from-the-editor").show();
