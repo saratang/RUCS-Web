@@ -10,7 +10,7 @@ if (pathArray[plast] == "") {
 	plast = plast - 1;
 }
 
-if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0)) {
+if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray[plast] != "#")) {
 //	window.location.href = "#table-of-contents";
 	$('link[type*=icon]').detach().appendTo('head');
 
