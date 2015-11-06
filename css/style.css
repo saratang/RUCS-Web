@@ -5346,10 +5346,7 @@ nav {
       right: 0.5rem;
       padding: 0; }
   nav ul {
-    margin-left: 1%;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0; }
+    margin: 0; }
     nav ul li {
       -webkit-transition: background-color 0.3s;
       -moz-transition: background-color 0.3s;
@@ -8680,6 +8677,9 @@ figcaption {
 
 #down-arrow:hover {
   text-shadow: 0 0 10px white; }
+
+#down-arrow-row {
+  margin-top: 23%; }
 
 .cyan-hover:hover {
   text-shadow: 0 0 10px #0097a7; }

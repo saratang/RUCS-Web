@@ -35,7 +35,13 @@
 		}
 	);
 
-
+	$(window).resize(function() {
+		if ($("#main-background").height() < 650) {
+			$("#down-arrow-row").hide();
+		} else {
+			$("#down-arrow-row").show();
+		}	
+	});
 	// 	var options = [
 	// 		{selector: '#index-banner', offset: 0,
 	// 		callback: "scrollToContents()"}
