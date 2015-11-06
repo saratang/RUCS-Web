@@ -24,9 +24,12 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 	
 	if(pathArray[plast] != "#letter-from-the-editor") {
 		var mini_name = pathArray[plast] + "-mini";
-//		console.log(mini_name);
 		$(mini_name).addClass("active");
 		$(mini_name).children().first().addClass("active");
+
+		if($(mini_name).length > 0) {
+			window.location.href = "#table-of-contents";
+		}
 	}
 } else {
 	$("#letter-from-the-editor").show();
