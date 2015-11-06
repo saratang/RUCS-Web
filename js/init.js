@@ -22,10 +22,15 @@ if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0) && (pathArray
 	$('a[href=' + pathArray[plast] + ']').addClass("chapter-active");
 	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
 	
+	if(pathArray[plast] != "#letter-from-the-editor") {
+		$("#mini-" + pathArray[plast]).addClass("active");
+		$("#mini-" + pathArray[plast]).children().first().addClass("active");
+	}
 } else {
 	$("#letter-from-the-editor").show();
 	$('a[href=' + "#letter-from-the-editor" + ']').addClass("chapter-active");
         $('a[href=' + "#letter-from-the-editor" + ']').addClass("disabled");
+	// if mobile, no need to expand letter from the editor
 } 
 
 $(function(){
