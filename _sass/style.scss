@@ -152,11 +152,11 @@ figcaption {
 		height: 100vh;
 		background: $background;
 		background-size: cover;
-		width: 1200px;
+		width: 100%;
 
 		.container {
 			.review-title-container, .review-subtitle-container, .bottom {
-				width: 1020px;
+//				width: 1020px;
 			}
 		}
 	}
@@ -167,7 +167,7 @@ figcaption {
 	}
 
 	.full-width {
-		width: $large-screen;
+		width: 100%;
 	}
 
 	.fixed-height {

@@ -2169,7 +2169,7 @@ ul.staggered-list li {
 /*********************
   Media Query Classes
 **********************/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important; } }
 
@@ -2177,11 +2177,11 @@ ul.staggered-list li {
   .hide-on-med-and-down {
     display: none !important; } }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 651px) {
   .hide-on-med-and-up {
     display: none !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 650px) and (max-width: 992px) {
   .hide-on-med-only {
     display: none !important; } }
 
@@ -2193,15 +2193,15 @@ ul.staggered-list li {
   .show-on-large {
     display: initial !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 650px) and (max-width: 992px) {
   .show-on-medium {
     display: initial !important; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .show-on-small {
     display: initial !important; } }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 651px) {
   .show-on-medium-and-up {
     display: initial !important; } }
 
@@ -2209,7 +2209,7 @@ ul.staggered-list li {
   .show-on-medium-and-down {
     display: initial !important; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .center-on-small-only {
     text-align: center; } }
 
@@ -5064,7 +5064,7 @@ nav ul a span.badge {
   max-width: 1280px;
   width: 90%; }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 651px) {
   .container {
     width: 85%; } }
 @media only screen and (min-width: 993px) {
@@ -5158,7 +5158,7 @@ nav ul a span.badge {
       margin-left: 91.66667%; }
     .row .col.offset-s12 {
       margin-left: 100%; }
-    @media only screen and (min-width: 601px) {
+    @media only screen and (min-width: 651px) {
       .row .col.m1 {
         width: 8.33333%;
         margin-left: 0; }
@@ -5400,7 +5400,7 @@ nav {
   .navbar-fixed nav {
     position: fixed; }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 651px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 64px;
     line-height: 64px; }
@@ -5502,64 +5502,64 @@ small {
   @media only screen and (min-width: 360px) {
     .flow-text {
       font-size: 1.2rem; } }
-  @media only screen and (min-width: 390px) {
+  @media only screen and (min-width: 387.5px) {
     .flow-text {
       font-size: 1.224rem; } }
-  @media only screen and (min-width: 420px) {
+  @media only screen and (min-width: 415px) {
     .flow-text {
       font-size: 1.248rem; } }
-  @media only screen and (min-width: 450px) {
+  @media only screen and (min-width: 442.5px) {
     .flow-text {
       font-size: 1.272rem; } }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 470px) {
     .flow-text {
       font-size: 1.296rem; } }
-  @media only screen and (min-width: 510px) {
+  @media only screen and (min-width: 497.5px) {
     .flow-text {
       font-size: 1.32rem; } }
-  @media only screen and (min-width: 540px) {
+  @media only screen and (min-width: 525px) {
     .flow-text {
       font-size: 1.344rem; } }
-  @media only screen and (min-width: 570px) {
+  @media only screen and (min-width: 552.5px) {
     .flow-text {
       font-size: 1.368rem; } }
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 580px) {
     .flow-text {
       font-size: 1.392rem; } }
-  @media only screen and (min-width: 630px) {
+  @media only screen and (min-width: 607.5px) {
     .flow-text {
       font-size: 1.416rem; } }
-  @media only screen and (min-width: 660px) {
+  @media only screen and (min-width: 635px) {
     .flow-text {
       font-size: 1.44rem; } }
-  @media only screen and (min-width: 690px) {
+  @media only screen and (min-width: 662.5px) {
     .flow-text {
       font-size: 1.464rem; } }
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 690px) {
     .flow-text {
       font-size: 1.488rem; } }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 717.5px) {
     .flow-text {
       font-size: 1.512rem; } }
-  @media only screen and (min-width: 780px) {
+  @media only screen and (min-width: 745px) {
     .flow-text {
       font-size: 1.536rem; } }
-  @media only screen and (min-width: 810px) {
+  @media only screen and (min-width: 772.5px) {
     .flow-text {
       font-size: 1.56rem; } }
-  @media only screen and (min-width: 840px) {
+  @media only screen and (min-width: 800px) {
     .flow-text {
       font-size: 1.584rem; } }
-  @media only screen and (min-width: 870px) {
+  @media only screen and (min-width: 827.5px) {
     .flow-text {
       font-size: 1.608rem; } }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 855px) {
     .flow-text {
       font-size: 1.632rem; } }
-  @media only screen and (min-width: 930px) {
+  @media only screen and (min-width: 882.5px) {
     .flow-text {
       font-size: 1.656rem; } }
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 910px) {
     .flow-text {
       font-size: 1.68rem; } }
   @media only screen and (max-width: 360px) {
@@ -5671,11 +5671,11 @@ small {
   display: block;
   position: fixed;
   z-index: 10000; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     #toast-container {
       min-width: 100%;
       bottom: 0%; } }
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  @media only screen and (min-width: 651px) and (max-width: 992px) {
     #toast-container {
       min-width: 30%;
       left: 5%;
@@ -5717,11 +5717,11 @@ small {
     margin-left: 3rem; }
   .toast.rounded {
     border-radius: 24px; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     .toast {
       width: 100%;
       border-radius: 0; } }
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  @media only screen and (min-width: 651px) and (max-width: 992px) {
     .toast {
       float: left; } }
   @media only screen and (min-width: 993px) {
@@ -6537,7 +6537,7 @@ textarea.materialize-textarea {
     .input-field .prefix ~ input {
       width: 86%;
       width: calc(100% - 3rem); } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 650px) {
     .input-field .prefix ~ input {
       width: 80%;
       width: calc(100% - 3rem); } }
@@ -8446,26 +8446,24 @@ figcaption {
 
   .full-width {
     width: 100%; } }
-@media only screen and (min-width: 601px) and (max-width: 992px) {
+@media only screen and (min-width: 651px) and (max-width: 992px) {
   .background {
     height: 100vh;
     background: url("../resources/backgroundweb.svg");
     background-size: cover;
-    width: 1200px; }
-    .background .container .review-title-container, .background .container .review-subtitle-container, .background .container .bottom {
-      width: 1020px; }
+    width: 100%; }
 
   .post-container {
     width: 70%;
     padding: 20px; }
 
   .full-width {
-    width: 1200px; }
+    width: 100%; }
 
   .fixed-height {
     height: 570px;
     width: 896px; } }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 651px) {
   .toc-container {
     margin-top: 5%;
     margin-bottom: 5%; }
@@ -8510,7 +8508,7 @@ figcaption {
     height: 250px;
     margin: 0.5rem !important;
     background-color: #0097a7; } }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .background {
     height: 100vh;
     background: url("../resources/backgroundweb.svg");
