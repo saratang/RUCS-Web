@@ -5,7 +5,7 @@
     <div class="col m3 l3 hide-on-small-and-down">
       <div class="marginless-collection collection">
 
-        <a href="#letter-from-the-editor" class="chapter-active waves-effect waves-light collection-item">
+        <a href="#letter-from-the-editor" class="waves-light collection-item">
           <span class="toc-title">Letter From the Editor</span>
         </a>
 
@@ -17,7 +17,7 @@
             {% assign i = i | minus: 1 %}
         {% else %}
 
-        <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-effect waves-light collection-item">
+        <a href="#{{ chapter[0] | replace: ' ', '-'}}" class="waves-light collection-item">
           <span class="toc-title">{{ chapter[0] | capitalize }}</span>
         </a>
 
@@ -27,7 +27,7 @@
 
         {% endfor %}
 
-        <a href="#profiles-and-interviews" class="waves-effect waves-light collection-item">
+        <a id="#profiles-and-interviews" href="#profiles-and-interviews" class="waves-light collection-item">
           <span class="toc-title">Profiles/Interviews</span>
         </a>
 
@@ -59,7 +59,7 @@
 
     <div class="col s12 hide-on-med-and-up show-on-small">
       <ul class="collapsible collapsible-toc" data-collapsible="accordion">
-        <li>
+        <li id="letter-from-the-editor-mini">
           <div class="collapsible-header toc-title">Letter From the Editor</div>
           <div class="collapsible-body">
             {% include foreword.html %}
@@ -70,7 +70,7 @@
           {% if chapter[0] == 'profiles and interviews' %}
               {% assign i = i | minus: 1 %}
           {% else %}
-            <li>
+            <li id="{{ chapter[0] | replace: ' ', '-'}}-mini">
               <div class="collapsible-header toc-title">{{ chapter[0] | capitalize }}</div>
                 {% for abstracts in chapter %}
                   {% if forloop.first == false %}
@@ -85,7 +85,7 @@
           {% endif %}
           {% assign i = i | plus: i %}
         {% endfor %}
-            <li>
+            <li id="profiles-and-interviews-mini">
               <div class="collapsible-header toc-title">Profiles/Interviews</div>
               <div class="collapsible-body">
                 {% for chapter in chapter_titles %}
