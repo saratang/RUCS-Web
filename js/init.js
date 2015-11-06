@@ -4,19 +4,24 @@ $(".parallax").parallax();
 $(".toc-content").children().hide();
 
 var pathArray = window.location.href.split( '/' );
+var plast = pathArray.length - 1;
 
-if ((pathArray.length > 3) && (pathArray[3] !== "") && (pathArray[3].indexOf("#") == 0)) {
-	console.log(pathArray[3]);
+if (pathArray[plast] == "") {
+	plast = plast - 1;
+}
+
+if ((pathArray.length > 3) && (pathArray[plast].indexOf("#") == 0)) {
+	console.log(pathArray[plast]);
 	console.log(pathArray.length);
 	window.location.href = "#table-of-contents";
 
-	if (pathArray[3] == "#table-of-contents") {
-		pathArray[3] = "#letter-from-the-editor";
+	if (pathArray[plast] == "#table-of-contents") {
+		pathArray[plast] = "#letter-from-the-editor";
 	} 
 
 	$(pathArray[3]).show();
-	$('a[href=' + pathArray[3] + ']').addClass("chapter-active");
-	$('a[href=' + pathArray[3] + ']').addClass("disabled");
+	$('a[href=' + pathArray[plast] + ']').addClass("chapter-active");
+	$('a[href=' + pathArray[plast] + ']').addClass("disabled");
 	
 } else {
 	$("#letter-from-the-editor").show();
